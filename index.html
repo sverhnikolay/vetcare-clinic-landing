@@ -1,190 +1,1143 @@
 <!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="VetCare — современная ветеринарная клиника с круглосуточной помощью и онлайн-записью.">
-  <title>VetCare — ветеринарная клиника рядом</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="fixes.css">
-</head>
-<body>
-  <svg class="svg-sprite" aria-hidden="true">
-    <symbol id="i-paw" viewBox="0 0 24 24"><ellipse cx="7" cy="6" rx="2.1" ry="3"/><ellipse cx="17" cy="6" rx="2.1" ry="3"/><ellipse cx="3.8" cy="11" rx="2.1" ry="2.8"/><ellipse cx="20.2" cy="11" rx="2.1" ry="2.8"/><path d="M12 9.5c-3 0-6 3.4-6 6.6 0 2.3 1.8 3.4 3.8 2.6a5.5 5.5 0 0 1 4.4 0c2 .8 3.8-.3 3.8-2.6 0-3.2-3-6.6-6-6.6z"/></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 2.5 10 7l-2.2 2.2a15 15 0 0 0 7 7L17 14l4.5 3.4-1.7 3.1c-.6 1-1.8 1.5-2.9 1.2C9.4 19.7 4.3 14.6 2.3 7.1 2 6 2.5 4.8 3.5 4.2z"/></symbol>
-    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 2v6M16 2v6M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5-4.7-4.6 6.5-.9z"/></symbol>
-    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8z"/></symbol>
-    <symbol id="i-steth" viewBox="0 0 24 24"><circle cx="5.5" cy="3.5" r="1.5"/><circle cx="14.5" cy="3.5" r="1.5"/><path d="M5.5 5v4.2a4.5 4.5 0 0 0 9 0V5M10 13.7v2.1a4.2 4.2 0 0 0 8.4 0v-1.1"/><circle cx="19" cy="12.5" r="2.1"/></symbol>
-    <symbol id="i-syringe" viewBox="0 0 24 24"><path d="m14.5 3.5 6 6M16.8 5.8l-9 9M5.5 12l6.5 6.5M8 14.5 3.5 19l1.5 1.5L9.5 16M12.2 8.2l3.6 3.6M3.5 20.5 2 22"/></symbol>
-    <symbol id="i-vet" viewBox="0 0 24 24"><circle cx="12" cy="6.5" r="3.2"/><path d="M4.5 21v-2.2A6.7 6.7 0 0 1 11.2 12h1.6a6.7 6.7 0 0 1 6.7 6.8V21M9 12.4l3 4 3-4M8.5 21v-4M15.5 21v-4"/></symbol>
-    <symbol id="i-scalpel" viewBox="0 0 24 24"><path d="m4 20 5.2-5.2M7.5 13.5l3 3 9.8-9.8-3-3zM14.8 6.2l3 3M3 21h6"/></symbol>
-    <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M12 5.2c-1.8 0-3.1-2-5.5-1.1C4 5 3.5 8.2 4.4 11c.6 2 1.5 2.7 1.8 5.7.2 2.1.8 3.8 2 3.8 1.5 0 1.6-4.7 3.8-4.7s2.3 4.7 3.8 4.7c1.2 0 1.8-1.7 2-3.8.3-3 1.2-3.7 1.8-5.7.9-2.8.4-6-2.1-6.9-2.4-.9-3.7 1.1-5.5 1.1z"/><path d="M9.5 6.2c1.5.7 3.5.7 5 0"/></symbol>
-    <symbol id="i-vk" viewBox="0 0 24 24"><path d="M12.8 18c-5.7 0-8.9-3.9-9-10.5h2.9c.1 4.8 2.2 6.8 3.8 7.2V7.5h2.8v4c1.6-.2 3.2-2.1 3.7-4h2.8c-.4 2.5-2.2 4.4-3.5 5.1 1.3.6 3.3 2.3 4 5.4h-3.1c-.5-1.9-1.9-3.3-3.9-3.6V18z"/></symbol>
-    <symbol id="i-telegram" viewBox="0 0 24 24"><path d="M21.5 4.1 18.6 19c-.2 1.1-.9 1.4-1.8.9l-4.5-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6 8.5-7.7c.4-.3-.1-.5-.6-.2L6.9 13.1l-4.5-1.4c-1-.3-1-1 .2-1.5l17.6-6.8c.8-.3 1.5.2 1.3.7z"/></symbol>
-    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.7" r="1"/></symbol>
-    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 21h10M12 17v4M5 11h3l2-4 3 7 2-3h4"/></symbol>
-    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 2h6M10 2v6L4 18a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L14 8V2M7 15h10"/></symbol>
-    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></symbol>
-    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
-  </svg>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="VetCare — современная ветеринарная клиника с круглосуточной помощью и онлайн-записью."
+    />
+    <title>VetCare — ветеринарная клиника рядом</title>
+    <link
+      rel="preload"
+      href="assets/onest-cyrillic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="design.css" />
+    <meta name="theme-color" content="#183e36" />
+  </head>
+  <body>
+    <svg class="svg-sprite" aria-hidden="true">
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="i-cat" viewBox="0 0 32 32">
+        <path
+          d="m6 13-1-9 8 5a17 17 0 0 1 6 0l8-5-1 9c5 10-1 15-10 15S2 23 6 13Z"
+        />
+        <path
+          d="M11 16v2m10-2v2m-7 4 2 2 2-2M2 19l6 1m-5 5 5-2m22-4-6 1m5 5-5-2"
+        />
+      </symbol>
+      <symbol id="i-dog" viewBox="0 0 32 32">
+        <path d="M9 8c3-4 11-4 14 0l3 10c0 7-4 10-10 10S6 25 6 18Z" />
+        <path
+          d="M9 7C4 7 2 12 3 19c2 2 5 0 6-3m14-9c5 0 7 5 6 12-2 2-5 0-6-3M11 15v2m10-2v2m-7 4 2 2 2-2m-2 2v3"
+        />
+      </symbol>
+      <symbol id="i-paw" viewBox="0 0 24 24">
+        <ellipse cx="7" cy="6" rx="2.1" ry="3" />
+        <ellipse cx="17" cy="6" rx="2.1" ry="3" />
+        <ellipse cx="3.8" cy="11" rx="2.1" ry="2.8" />
+        <ellipse cx="20.2" cy="11" rx="2.1" ry="2.8" />
+        <path
+          d="M12 9.5c-3 0-6 3.4-6 6.6 0 2.3 1.8 3.4 3.8 2.6a5.5 5.5 0 0 1 4.4 0c2 .8 3.8-.3 3.8-2.6 0-3.2-3-6.6-6-6.6z"
+        />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="M6.6 2.5 10 7l-2.2 2.2a15 15 0 0 0 7 7L17 14l4.5 3.4-1.7 3.1c-.6 1-1.8 1.5-2.9 1.2C9.4 19.7 4.3 14.6 2.3 7.1 2 6 2.5 4.8 3.5 4.2z"
+        />
+      </symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path
+          d="M8 2v6M16 2v6M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"
+        />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path
+          d="m12 2.5 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5-4.7-4.6 6.5-.9z"
+        />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8z"
+        />
+      </symbol>
+      <symbol id="i-steth" viewBox="0 0 24 24">
+        <circle cx="5.5" cy="3.5" r="1.5" />
+        <circle cx="14.5" cy="3.5" r="1.5" />
+        <path
+          d="M5.5 5v4.2a4.5 4.5 0 0 0 9 0V5M10 13.7v2.1a4.2 4.2 0 0 0 8.4 0v-1.1"
+        />
+        <circle cx="19" cy="12.5" r="2.1" />
+      </symbol>
+      <symbol id="i-syringe" viewBox="0 0 24 24">
+        <path
+          d="m14.5 3.5 6 6M16.8 5.8l-9 9M5.5 12l6.5 6.5M8 14.5 3.5 19l1.5 1.5L9.5 16M12.2 8.2l3.6 3.6M3.5 20.5 2 22"
+        />
+      </symbol>
+      <symbol id="i-vet" viewBox="0 0 24 24">
+        <circle cx="12" cy="6.5" r="3.2" />
+        <path
+          d="M4.5 21v-2.2A6.7 6.7 0 0 1 11.2 12h1.6a6.7 6.7 0 0 1 6.7 6.8V21M9 12.4l3 4 3-4M8.5 21v-4M15.5 21v-4"
+        />
+      </symbol>
+      <symbol id="i-scalpel" viewBox="0 0 24 24">
+        <path d="m4 20 5.2-5.2M7.5 13.5l3 3 9.8-9.8-3-3zM14.8 6.2l3 3M3 21h6" />
+      </symbol>
+      <symbol id="i-tooth" viewBox="0 0 24 24">
+        <path
+          d="M12 5.2c-1.8 0-3.1-2-5.5-1.1C4 5 3.5 8.2 4.4 11c.6 2 1.5 2.7 1.8 5.7.2 2.1.8 3.8 2 3.8 1.5 0 1.6-4.7 3.8-4.7s2.3 4.7 3.8 4.7c1.2 0 1.8-1.7 2-3.8.3-3 1.2-3.7 1.8-5.7.9-2.8.4-6-2.1-6.9-2.4-.9-3.7 1.1-5.5 1.1z"
+        />
+        <path d="M9.5 6.2c1.5.7 3.5.7 5 0" />
+      </symbol>
+      <symbol id="i-vk" viewBox="0 0 24 24">
+        <path
+          d="M12.8 18c-5.7 0-8.9-3.9-9-10.5h2.9c.1 4.8 2.2 6.8 3.8 7.2V7.5h2.8v4c1.6-.2 3.2-2.1 3.7-4h2.8c-.4 2.5-2.2 4.4-3.5 5.1 1.3.6 3.3 2.3 4 5.4h-3.1c-.5-1.9-1.9-3.3-3.9-3.6V18z"
+        />
+      </symbol>
+      <symbol id="i-telegram" viewBox="0 0 24 24">
+        <path
+          d="M21.5 4.1 18.6 19c-.2 1.1-.9 1.4-1.8.9l-4.5-3.4-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.6 8.5-7.7c.4-.3-.1-.5-.6-.2L6.9 13.1l-4.5-1.4c-1-.3-1-1 .2-1.5l17.6-6.8c.8-.3 1.5.2 1.3.7z"
+        />
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="18" height="18" rx="5" />
+        <circle cx="12" cy="12" r="4.2" />
+        <circle cx="17.4" cy="6.7" r="1" />
+      </symbol>
+      <symbol id="i-monitor" viewBox="0 0 24 24">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <path d="M7 21h10M12 17v4M5 11h3l2-4 3 7 2-3h4" />
+      </symbol>
+      <symbol id="i-flask" viewBox="0 0 24 24">
+        <path
+          d="M9 2h6M10 2v6L4 18a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3L14 8V2M7 15h10"
+        />
+      </symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24">
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <path d="m2 6 10 7 10-7" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="m5 12 4 4L19 6" />
+      </symbol>
+    </svg>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="#top" aria-label="VetCare — на главную"><svg><use href="#i-paw"/></svg><span>VetCare</span></a>
-      <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="#services">Услуги</a><a href="#doctors">Врачи</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a>
-      </nav>
-      <a class="header-phone" href="tel:+74951204567"><svg><use href="#i-phone"/></svg>+7 (495) 120-45-67</a>
-      <button class="btn btn-primary open-booking">Записаться онлайн</button>
+    <a class="skip-link" href="#main-content">Перейти к содержанию</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="VetCare — на главную"
+          ><svg><use href="#i-paw" /></svg
+          ><span>VetCare<small>Ветеринарная клиника</small></span></a
+        >
+        <button
+          class="menu-toggle"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="#services">Услуги</a><a href="#doctors">Врачи</a
+          ><a href="#prices">Цены</a><a href="#reviews">Отзывы</a
+          ><a href="#contacts">Контакты</a>
+        </nav>
+        <a class="header-phone" href="tel:+74951204567"
+          ><svg><use href="#i-phone" /></svg>+7 (495) 120-45-67</a
+        >
+        <button class="btn btn-primary open-booking">
+          Записаться <svg><use href="#i-arrow" /></svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero" id="main-content">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <p class="eyebrow">
+              <span class="status-dot"></span> Рядом с вами. На стороне питомца.
+            </p>
+            <h1>
+              Большая забота<br />о маленьких<br /><em>друзьях.</em
+              ><svg class="hero-flower"><use href="#i-paw" /></svg>
+            </h1>
+            <p class="hero-lead">
+              Современная ветеринарная медицина<br class="desktop-break" />
+              и немного больше любви. Для тех,<br class="desktop-break" />
+              кто стал частью вашей семьи.
+            </p>
+            <div class="hero-actions">
+              <button class="btn btn-primary btn-lg open-booking">
+                Записать питомца <svg><use href="#i-arrow" /></svg></button
+              ><a class="hero-service-link" href="#services"
+                >Познакомиться с клиникой <span>↗</span></a
+              >
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>15<span>+</span></strong
+                ><small>лет заботы о питомцах</small>
+              </div>
+              <div>
+                <strong>4.9<span>★</span></strong
+                ><small>рейтинг на Яндексе</small>
+              </div>
+              <div><strong>24/7</strong><small>экстренная помощь</small></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="hero-photo">
+              <img
+                src="assets/hero.webp"
+                alt="Ветеринар заботливо обнимает золотистого ретривера и полосатого кота"
+                fetchpriority="high"
+                width="1400"
+                height="933"
+              />
+            </div>
+            <div class="hero-photo-note">
+              <span class="note-icon"
+                ><svg><use href="#i-heart" /></svg
+              ></span>
+              <div>
+                <b>Чувствуем. Понимаем. Помогаем.</b
+                ><span>Забота, которую они чувствуют</span>
+              </div>
+            </div>
+            <span class="hero-caption"
+              >Профессионально о здоровье. По‑человечески о любви.</span
+            >
+            <svg class="hero-spark" viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M32 2v60M2 32h60M11 11l42 42M11 53l42-42" />
+            </svg>
+          </div>
+        </div>
+        <div class="hero-bottom container">
+          <span>Москва · Большой Саввинский пер., 9</span
+          ><a href="#services">Листайте, чтобы познакомиться <span>↓</span></a>
+        </div>
+      </section>
+
+      <section class="section selector-section">
+        <div class="container selector-card">
+          <div class="section-heading">
+            <p class="eyebrow">Начнём с простого</p>
+            <h2>Что беспокоит <em>вашего друга?</em></h2>
+            <p>Пара вопросов — и мы подскажем, с чего начать.</p>
+          </div>
+          <div class="selector-grid">
+            <div class="quiz">
+              <fieldset>
+                <legend><span>01</span> Кто ваш питомец?</legend>
+                <div class="choice-row">
+                  <button
+                    class="choice active"
+                    data-pet="Кошка"
+                    aria-pressed="true"
+                  >
+                    <svg><use href="#i-cat" /></svg><span>Кошка</span
+                    ><i></i></button
+                  ><button
+                    class="choice"
+                    data-pet="Собака"
+                    aria-pressed="false"
+                  >
+                    <svg><use href="#i-dog" /></svg><span>Собака</span><i></i>
+                  </button>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend><span>02</span> Что беспокоит?</legend>
+                <div class="chips">
+                  <button class="chip active" data-service="Первичный осмотр">
+                    Осмотр</button
+                  ><button class="chip" data-service="Вакцинация">
+                    Вакцинация</button
+                  ><button class="chip" data-service="Диагностика">
+                    Хромота</button
+                  ><button class="chip" data-service="Диагностика">Рвота</button
+                  ><button class="chip" data-service="Стоматология">
+                    Зубы
+                  </button>
+                </div>
+              </fieldset>
+              <button class="btn btn-primary quiz-submit">
+                Подобрать услугу <svg><use href="#i-arrow" /></svg>
+              </button>
+            </div>
+            <div class="recommendation" aria-live="polite">
+              <div class="recommendation-top">
+                <span class="badge">С заботой о вашем питомце</span
+                ><svg><use href="#i-steth" /></svg>
+              </div>
+              <h3 data-rec-title>Первичный осмотр</h3>
+              <p data-rec-copy>
+                Познакомимся с питомцем, оценим его здоровье и ответим на ваши
+                вопросы.
+              </p>
+              <strong data-rec-price>от 1 500 ₽</strong
+              ><button
+                class="recommendation-book open-booking"
+                data-service-name="Первичный осмотр"
+              >
+                Записаться на приём <span>↗</span></button
+              ><small>Точный план определяет врач на приёме</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section why">
+        <div class="container">
+          <div class="section-heading row-heading">
+            <div>
+              <p class="eyebrow">Почему выбирают VetCare</p>
+              <h2>Наука в основе.<br /><em>Забота в каждом движении.</em></h2>
+            </div>
+            <p class="section-intro">
+              Мы знаем, что за каждым визитом —<br />чья-то большая любовь. И
+              относимся<br />к этому со всей ответственностью.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature">
+              <div class="circle-icon">
+                <svg><use href="#i-vet" /></svg>
+              </div>
+              <h3>Опытные врачи</h3>
+              <p>
+                В нашей клинике работают сертифицированные специалисты с опытом
+                от 5 лет.
+              </p>
+            </article>
+            <article class="feature">
+              <div class="circle-icon">
+                <svg><use href="#i-monitor" /></svg>
+              </div>
+              <h3>Собственная диагностика</h3>
+              <p>
+                Современное оборудование для точной диагностики на месте и
+                быстро.
+              </p>
+            </article>
+            <article class="feature">
+              <div class="circle-icon"><span>24/7</span></div>
+              <h3>Срочный прием</h3>
+              <p>
+                Мы готовы помочь вашему питомцу круглосуточно, без выходных.
+              </p>
+            </article>
+            <article class="feature">
+              <div class="circle-icon">
+                <svg><use href="#i-bell" /></svg>
+              </div>
+              <h3>Напоминания и сопровождение</h3>
+              <p>Напоминаем о визитах и всегда на связи после приема.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section doctors" id="doctors">
+        <div class="container">
+          <div class="section-heading row-heading">
+            <div>
+              <p class="eyebrow">Люди VetCare</p>
+              <h2>Врачи, которым<br /><em>доверяют самое дорогое.</em></h2>
+            </div>
+            <button class="text-link show-doctors">
+              Познакомиться с командой <span>↗</span>
+            </button>
+          </div>
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <div class="doctor-photo photo-1"></div>
+              <div>
+                <h3>Анна Смирнова</h3>
+                <em>Терапевт</em>
+                <p>Опыт работы 8 лет</p>
+                <p>
+                  Специализируется на терапии кошек и собак, профилактике
+                  заболеваний и ведении пациентов.
+                </p>
+                <button
+                  class="text-link open-booking"
+                  data-doctor="Анна Смирнова"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+            <article class="doctor-card">
+              <div class="doctor-photo photo-2"></div>
+              <div>
+                <h3>Игорь Лебедев</h3>
+                <em>Хирург</em>
+                <p>Опыт работы 12 лет</p>
+                <p>
+                  Проводит мягкотканные и ортопедические операции, в том числе
+                  повышенной сложности.
+                </p>
+                <button
+                  class="text-link open-booking"
+                  data-doctor="Игорь Лебедев"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+            <article class="doctor-card">
+              <div class="doctor-photo photo-3"></div>
+              <div>
+                <h3>Мария Кузнецова</h3>
+                <em>Дерматолог</em>
+                <p>Опыт работы 6 лет</p>
+                <p>
+                  Диагностика и лечение кожных заболеваний, аллергий и ушных
+                  патологий.
+                </p>
+                <button
+                  class="text-link open-booking"
+                  data-doctor="Мария Кузнецова"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services" id="services">
+        <div class="container">
+          <div class="section-heading row-heading">
+            <div>
+              <p class="eyebrow">Услуги клиники</p>
+              <h2>Здоровье — <em>в деталях.</em></h2>
+            </div>
+            <p class="section-intro">
+              От первого знакомства до сложной операции.<br />Всё необходимое в
+              одной клинике.
+            </p>
+          </div>
+          <div class="tabs" role="group" aria-label="Фильтр услуг">
+            <button class="tab active" data-filter="all">Все услуги</button
+            ><button class="tab" data-filter="diagnostic">Диагностика</button
+            ><button class="tab" data-filter="treatment">Лечение</button
+            ><button class="tab" data-filter="prevention">Профилактика</button
+            ><button class="tab" data-filter="surgery">Хирургия</button
+            ><button class="tab" data-filter="dentistry">Стоматология</button>
+          </div>
+          <div class="service-grid">
+            <article class="service-card" data-category="treatment">
+              <div class="service-icon">
+                <svg><use href="#i-steth" /></svg>
+              </div>
+              <div>
+                <h3>Первичный осмотр</h3>
+                <p>
+                  Комплексный осмотр, оценка состояния здоровья и консультация
+                  врача.
+                </p>
+                <strong>от 1 500 ₽</strong
+                ><button
+                  class="text-link open-booking"
+                  data-service-name="Первичный осмотр"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+            <article class="service-card" data-category="prevention">
+              <div class="service-icon">
+                <svg><use href="#i-syringe" /></svg>
+              </div>
+              <div>
+                <h3>Вакцинация</h3>
+                <p>
+                  Подбор вакцины и проведение прививок с учетом возраста и
+                  образа жизни питомца.
+                </p>
+                <strong>от 1 200 ₽</strong
+                ><button
+                  class="text-link open-booking"
+                  data-service-name="Вакцинация"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+            <article class="service-card" data-category="diagnostic">
+              <div class="service-icon">
+                <svg><use href="#i-monitor" /></svg>
+              </div>
+              <div>
+                <h3>УЗИ и диагностика</h3>
+                <p>
+                  Ультразвуковая диагностика органов и тканей, постановка
+                  точного диагноза.
+                </p>
+                <strong>от 2 500 ₽</strong
+                ><button
+                  class="text-link open-booking"
+                  data-service-name="УЗИ и диагностика"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+            <article class="service-card" data-category="surgery">
+              <div class="service-icon">
+                <svg><use href="#i-scalpel" /></svg>
+              </div>
+              <div>
+                <h3>Хирургия</h3>
+                <p>
+                  Плановые и экстренные операции любой сложности с безопасной
+                  анестезией.
+                </p>
+                <strong>от 5 000 ₽</strong
+                ><button
+                  class="text-link open-booking"
+                  data-service-name="Хирургия"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+            <article class="service-card" data-category="dentistry">
+              <div class="service-icon">
+                <svg><use href="#i-tooth" /></svg>
+              </div>
+              <div>
+                <h3>Стоматология</h3>
+                <p>
+                  Профессиональная чистка зубов, лечение заболеваний полости
+                  рта.
+                </p>
+                <strong>от 2 000 ₽</strong
+                ><button
+                  class="text-link open-booking"
+                  data-service-name="Стоматология"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+            <article class="service-card" data-category="diagnostic">
+              <div class="service-icon">
+                <svg><use href="#i-flask" /></svg>
+              </div>
+              <div>
+                <h3>Анализы</h3>
+                <p>
+                  Широкий спектр лабораторных исследований для точной
+                  диагностики.
+                </p>
+                <strong>от 700 ₽</strong
+                ><button
+                  class="text-link open-booking"
+                  data-service-name="Анализы"
+                >
+                  Подробнее <span>›</span>
+                </button>
+              </div>
+            </article>
+          </div>
+          <div class="emergency-strip">
+            <div class="emergency-icon">
+              <svg><use href="#i-phone" /></svg><b>24/7</b>
+            </div>
+            <div>
+              <h3>Срочная помощь 24/7</h3>
+              <p>
+                Мы всегда на связи и готовы помочь вашему питомцу в экстренной
+                ситуации.
+              </p>
+            </div>
+            <a class="btn btn-outline" href="tel:+74951204567"
+              ><svg><use href="#i-phone" /></svg>+7 (495) 120-45-67</a
+            ><a class="btn btn-primary" href="tel:+74951204567"
+              >Позвонить сейчас</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section cases" id="cases">
+        <div class="container">
+          <div class="section-heading row-heading">
+            <div>
+              <p class="eyebrow">Истории наших пациентов</p>
+              <h2>Снова играют.<br /><em>И снова радуют вас.</em></h2>
+            </div>
+            <p class="section-intro">
+              За каждым результатом — точная диагностика,<br />работа команды и
+              ваша любовь.
+            </p>
+          </div>
+          <div class="case-grid">
+            <article class="case-card">
+              <div class="case-photo case-1"></div>
+              <h3>Кот с отказом от еды</h3>
+              <p><b>Проблема:</b><br />отказ от еды, вялость</p>
+              <p>
+                <b>Что сделали:</b><br />провели диагностику, выявили проблемы с
+                ЖКТ, назначили лечение
+              </p>
+              <p>
+                <b>Результат:</b><br />через 3 дня кот вернулся к активной жизни
+                и аппетиту
+              </p>
+              <button
+                class="text-link case-more"
+                data-case="Кот с отказом от еды"
+              >
+                Подробнее о случае <span>›</span>
+              </button>
+            </article>
+            <article class="case-card">
+              <div class="case-photo case-2"></div>
+              <h3>Собака после травмы лапы</h3>
+              <p><b>Проблема:</b><br />хромота после падения</p>
+              <p><b>Что сделали:</b><br />рентген, лечение и физиотерапия</p>
+              <p>
+                <b>Результат:</b><br />через 4 недели собака полностью
+                восстановилась
+              </p>
+              <button
+                class="text-link case-more"
+                data-case="Собака после травмы лапы"
+              >
+                Подробнее о случае <span>›</span>
+              </button>
+            </article>
+            <article class="case-card">
+              <div class="case-photo case-3"></div>
+              <h3>Щенок с кожной аллергией</h3>
+              <p><b>Проблема:</b><br />зуд, покраснения, высыпания</p>
+              <p>
+                <b>Что сделали:</b><br />диагностика, гипоаллергенная диета,
+                терапия
+              </p>
+              <p>
+                <b>Результат:</b><br />симптомы прошли, щенок здоров и активен
+              </p>
+              <button
+                class="text-link case-more"
+                data-case="Щенок с кожной аллергией"
+              >
+                Подробнее о случае <span>›</span>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Как всё устроено</p>
+            <h2>Рядом. <em>На каждом шаге.</em></h2>
+            <p>Чтобы вы чувствовали себя спокойно, а питомец — лучше.</p>
+          </div>
+          <div class="steps">
+            <article>
+              <span class="step-num">1</span
+              ><svg><use href="#i-calendar" /></svg>
+              <h3>Оставляете заявку</h3>
+              <p>Выберите услугу и удобное время на сайте или позвоните нам.</p>
+            </article>
+            <article>
+              <span class="step-num">2</span><svg><use href="#i-phone" /></svg>
+              <h3>Подтверждаем запись</h3>
+              <p>Администратор свяжется с вами для подтверждения визита.</p>
+            </article>
+            <article>
+              <span class="step-num">3</span><svg><use href="#i-steth" /></svg>
+              <h3>Прием и диагностика</h3>
+              <p>
+                Проводим осмотр, диагностику и назначаем необходимое лечение.
+              </p>
+            </article>
+            <article>
+              <span class="step-num">4</span><svg><use href="#i-heart" /></svg>
+              <h3>Рекомендации и сопровождение</h3>
+              <p>
+                Даем рекомендации и остаемся на связи для вашего спокойствия.
+              </p>
+            </article>
+          </div>
+          <div class="booking-banner">
+            <div class="banner-pets"></div>
+            <div>
+              <h3>Запишитесь онлайн — это быстро и удобно</h3>
+              <p>Выберите удобное время, и мы позаботимся о вашем питомце.</p>
+            </div>
+            <div>
+              <button class="btn btn-primary open-booking">
+                <svg><use href="#i-calendar" /></svg>Записаться онлайн</button
+              ><a href="tel:+74951204567"
+                ><svg><use href="#i-phone" /></svg>+7 (495) 120-45-67</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section prices" id="prices">
+        <div class="container">
+          <div class="section-heading row-heading">
+            <div>
+              <p class="eyebrow">Цены и пакеты</p>
+              <h2>Забота <em>с понятной ценой.</em></h2>
+            </div>
+            <p class="section-intro">
+              Обсуждаем план и стоимость до лечения.<br />Вы всегда знаете, за
+              что платите.
+            </p>
+          </div>
+          <div class="price-grid">
+            <article class="price-card">
+              <h3>Базовый осмотр</h3>
+              <p>Для регулярной заботы<br />о здоровье питомца</p>
+              <strong>1 500 ₽</strong>
+              <ul>
+                <li>Первичный осмотр</li>
+                <li>Консультация врача</li>
+                <li>Измерение температуры</li>
+                <li>Общие рекомендации</li>
+              </ul>
+              <button
+                class="btn btn-outline open-booking"
+                data-service-name="Базовый осмотр"
+              >
+                Выбрать пакет
+              </button>
+            </article>
+            <article class="price-card">
+              <h3>Комплексный чекап</h3>
+              <p>Полная диагностика<br />здоровья</p>
+              <strong>3 900 ₽</strong>
+              <ul>
+                <li>Осмотр и консультация</li>
+                <li>Общий анализ крови</li>
+                <li>Анализ мочи</li>
+                <li>УЗИ брюшной полости</li>
+                <li>Рекомендации по питанию</li>
+              </ul>
+              <button
+                class="btn btn-outline open-booking"
+                data-service-name="Комплексный чекап"
+              >
+                Выбрать пакет
+              </button>
+            </article>
+            <article class="price-card featured">
+              <span class="price-label">Выгодно</span>
+              <h3>Годовая профилактика</h3>
+              <p>Забота и защита<br />на целый год</p>
+              <strong>6 900 ₽</strong>
+              <ul>
+                <li>Два плановых осмотра</li>
+                <li>Все обязательные прививки</li>
+                <li>Обработка от паразитов</li>
+                <li>Скидка 10% на услуги</li>
+              </ul>
+              <button
+                class="btn btn-primary open-booking"
+                data-service-name="Годовая профилактика"
+              >
+                Выбрать пакет
+              </button>
+            </article>
+            <article class="price-card urgent">
+              <span class="price-label">24/7</span>
+              <h3>Срочная помощь</h3>
+              <p>Помощь в экстренных<br />ситуациях 24/7</p>
+              <strong>от 3 000 ₽</strong>
+              <ul>
+                <li>Неотложная помощь</li>
+                <li>Стабилизация состояния</li>
+                <li>Диагностика на месте</li>
+                <li>Госпитализация при необходимости</li>
+              </ul>
+              <a class="btn btn-danger" href="tel:+74951204567"
+                >Вызвать врача</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reviews" id="reviews">
+        <div class="container">
+          <div class="section-heading row-heading">
+            <div>
+              <p class="eyebrow">Отзывы владельцев</p>
+              <h2>Любовь, <em>которая возвращается.</em></h2>
+            </div>
+            <div class="review-rating">
+              <b>4.9 <span>★★★★★</span></b
+              ><small>Нам доверяют на Яндексе</small>
+            </div>
+          </div>
+          <div class="review-grid">
+            <article>
+              <div class="stars">★★★★★</div>
+              <div class="reviewer">
+                <span class="avatar pet-cat">🐱</span>
+                <p><b>Ольга С.</b><small>Кошка Мурка</small></p>
+              </div>
+              <p>
+                Очень внимательные врачи и чуткое отношение к животным. Быстро
+                нашли проблему и назначили лечение.
+              </p>
+            </article>
+            <article>
+              <div class="stars">★★★★★</div>
+              <div class="reviewer">
+                <span class="avatar pet-dog">🐶</span>
+                <p><b>Дмитрий К.</b><small>Собака Бакс</small></p>
+              </div>
+              <p>
+                Обращаемся в VetCare уже больше года. Нравится высокий
+                профессионализм и современные методы диагностики.
+              </p>
+            </article>
+            <article>
+              <div class="stars">★★★★★</div>
+              <div class="reviewer">
+                <span class="avatar pet-cat">🐈</span>
+                <p><b>Анна Л.</b><small>Кот Барсик</small></p>
+              </div>
+              <p>
+                Удобная онлайн-запись и минимум ожидания. Делали вакцинацию —
+                все прошло спокойно и без стресса.
+              </p>
+            </article>
+            <article>
+              <div class="stars">★★★★★</div>
+              <div class="reviewer">
+                <span class="avatar pet-rabbit">🐰</span>
+                <p><b>Ирина М.</b><small>Кролик Пушок</small></p>
+              </div>
+              <p>
+                Спасибо за помощь в экстренной ситуации ночью. Врач приехал
+                быстро и спас нашего Пушка.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq">
+        <div class="container faq-layout">
+          <div class="section-heading">
+            <p class="eyebrow">Узнать заранее</p>
+            <h2>Вы спрашиваете.<br /><em>Мы отвечаем.</em></h2>
+            <p>Не нашли свой вопрос?<br />Мы всегда рады помочь.</p>
+            <a class="text-link" href="tel:+74951204567"
+              >+7 (495) 120-45-67 <span>↗</span></a
+            >
+          </div>
+          <div class="accordion">
+            <article class="faq-item">
+              <button>
+                <span>Как получить срочную помощь ночью или в выходные?</span
+                ><b>+</b>
+              </button>
+              <div>
+                Мы работаем круглосуточно. Позвоните нам по телефону +7 (495)
+                120-45-67 — дежурный врач проконсультирует и при необходимости
+                примет вас в клинике.
+              </div>
+            </article>
+            <article class="faq-item">
+              <button>
+                <span>Можно ли записаться на прием онлайн?</span><b>+</b>
+              </button>
+              <div>
+                Да, вы можете выбрать удобное время и услугу на сайте. После
+                записи мы отправим подтверждение на телефон.
+              </div>
+            </article>
+            <article class="faq-item">
+              <button>
+                <span>Как подготовить питомца к вакцинации?</span><b>+</b>
+              </button>
+              <div>
+                За 10–14 дней обработайте питомца от паразитов. На прием
+                животное должно прийти клинически здоровым.
+              </div>
+            </article>
+            <article class="faq-item">
+              <button>
+                <span>Проводите ли вы анализы и диагностику на месте?</span
+                ><b>+</b>
+              </button>
+              <div>
+                Да, в клинике есть лаборатория, УЗИ и современное
+                диагностическое оборудование.
+              </div>
+            </article>
+            <article class="faq-item">
+              <button>
+                <span>Сколько длится прием у ветеринара?</span><b>+</b>
+              </button>
+              <div>
+                Обычный прием занимает 30–40 минут, а длительность
+                диагностических процедур зависит от показаний.
+              </div>
+            </article>
+            <article class="faq-item">
+              <button>
+                <span>Есть ли парковка возле клиники?</span><b>+</b>
+              </button>
+              <div>
+                Да, для посетителей клиники предусмотрена бесплатная парковка во
+                дворе.
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contacts">
+        <div class="container contact-card">
+          <form class="inline-form" id="contact-form">
+            <h2>Запишитесь на прием</h2>
+            <p>
+              Оставьте заявку — мы свяжемся с вами и подберем удобное время.
+            </p>
+            <div class="form-grid">
+              <label
+                >Ваше имя<input
+                  required
+                  name="name"
+                  placeholder="Иван Иванов" /></label
+              ><label
+                >Телефон<input
+                  required
+                  name="phone"
+                  inputmode="tel"
+                  placeholder="+7 (___) ___-__-__" /></label
+              ><label
+                >Имя питомца<input
+                  name="pet"
+                  placeholder="Кличка питомца" /></label
+              ><label
+                >Услуга<select name="service">
+                  <option>Выберите услугу</option>
+                  <option>Первичный осмотр</option>
+                  <option>Вакцинация</option>
+                  <option>Диагностика</option>
+                  <option>Хирургия</option>
+                </select></label
+              >
+            </div>
+            <label
+              >Комментарий к заявке (необязательно)<textarea
+                name="comment"
+                placeholder="Опишите симптомы или задайте вопрос"
+              ></textarea></label
+            ><label class="consent"
+              ><input type="checkbox" required /> Я согласен на обработку
+              персональных данных</label
+            ><button class="btn btn-primary" type="submit">
+              Отправить заявку
+            </button>
+          </form>
+          <div class="contact-info">
+            <div class="contact-copy">
+              <h3>Наши контакты</h3>
+              <p>
+                <svg><use href="#i-pin" /></svg>г. Москва, Большой Саввинский
+                пер., д. 9
+              </p>
+              <a href="tel:+74951204567"
+                ><svg><use href="#i-phone" /></svg>+7 (495) 120-45-67</a
+              ><a href="mailto:info@vetcare.ru"
+                ><svg><use href="#i-mail" /></svg>info@vetcare.ru</a
+              >
+              <p>
+                <svg><use href="#i-clock" /></svg>Пн–Пт: 09:00 – 21:00<br /><span
+                  >Сб–Вс: 10:00 – 20:00</span
+                >
+              </p>
+              <a class="btn btn-outline" href="tel:+74951204567"
+                >Позвонить сейчас</a
+              ><a class="btn btn-danger" href="tel:+74951204567"
+                >Срочная помощь 24/7</a
+              >
+            </div>
+            <div class="map">
+              <span class="map-pin"
+                ><svg><use href="#i-pin" /></svg></span
+              ><span class="road road-1"></span><span class="road road-2"></span
+              ><span class="road road-3"></span><b>Большой Саввинский пер.</b>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="logo" href="#top"
+            ><svg><use href="#i-paw" /></svg><span>VetCare</span></a
+          >
+          <p>Забота о ваших питомцах —<br />наша профессия.</p>
+          <div class="socials">
+            <a
+              href="https://vk.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="ВКонтакте"
+              ><svg><use href="#i-vk" /></svg></a
+            ><a
+              href="https://t.me"
+              target="_blank"
+              rel="noopener"
+              aria-label="Telegram"
+              ><svg><use href="#i-telegram" /></svg></a
+            ><a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              ><svg><use href="#i-instagram" /></svg
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h4>Навигация</h4>
+          <a href="#services">Услуги</a><a href="#doctors">Врачи</a
+          ><a href="#prices">Цены</a><a href="#reviews">Отзывы</a
+          ><a href="#contacts">Контакты</a>
+        </div>
+        <div>
+          <h4>Услуги</h4>
+          <a href="#services">Терапия</a><a href="#services">Хирургия</a
+          ><a href="#services">Диагностика</a><a href="#services">Вакцинация</a
+          ><a href="#services">Стоматология</a>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <a href="tel:+74951204567"
+            ><svg><use href="#i-phone" /></svg>+7 (495) 120-45-67</a
+          ><a href="mailto:info@vetcare.ru"
+            ><svg><use href="#i-mail" /></svg>info@vetcare.ru</a
+          >
+          <p>
+            <svg><use href="#i-pin" /></svg>г. Москва, Большой Саввинский пер.,
+            д. 9
+          </p>
+        </div>
+        <div>
+          <h4>Мы работаем</h4>
+          <p>Пн–Пт: &nbsp;09:00 – 21:00</p>
+          <p>Сб–Вс: &nbsp;10:00 – 20:00</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 VetCare. Все права защищены.</span
+        ><span>Демонстрационный проект SHERER</span
+        ><a href="#">Политика конфиденциальности</a
+        ><a href="#">Пользовательское соглашение</a
+        ><span>Сделано с <b>♥</b> для ваших питомцев</span>
+      </div>
+    </footer>
+
+    <div class="modal" id="booking-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <section
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="booking-title"
+      >
+        <button class="modal-close" data-close aria-label="Закрыть">×</button
+        ><span class="badge">Онлайн-запись</span>
+        <h2 id="booking-title">Записать питомца на прием</h2>
+        <p>
+          Оставьте контакты — администратор подтвердит удобное время в течение
+          10 минут.
+        </p>
+        <form id="booking-form">
+          <div class="form-grid">
+            <label
+              >Ваше имя<input
+                required
+                name="name"
+                placeholder="Как к вам обращаться" /></label
+            ><label
+              >Телефон<input
+                required
+                name="phone"
+                inputmode="tel"
+                placeholder="+7 (___) ___-__-__" /></label
+            ><label
+              >Имя питомца<input
+                required
+                name="pet"
+                placeholder="Например, Бакс" /></label
+            ><label
+              >Услуга<select name="service">
+                <option>Первичный осмотр</option>
+                <option>Вакцинация</option>
+                <option>Диагностика</option>
+                <option>Хирургия</option>
+                <option>Стоматология</option>
+              </select></label
+            ><label>Дата<input required type="date" name="date" /></label
+            ><label
+              >Удобное время<select name="time">
+                <option>09:00–12:00</option>
+                <option>12:00–16:00</option>
+                <option>16:00–20:00</option>
+              </select></label
+            >
+          </div>
+          <button class="btn btn-primary btn-lg" type="submit">
+            Подтвердить запись
+          </button>
+        </form>
+      </section>
     </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-photo" aria-hidden="true"></div>
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">Забота рядом каждый день</p>
-          <h1>Ветеринарная клиника рядом с вами — помощь питомцу без ожидания</h1>
-          <p class="hero-lead">Забота о кошках и собаках любого возраста. Срочная помощь 24/7, онлайн-запись без очередей и опытные врачи рядом с вами.</p>
-          <div class="hero-actions"><button class="btn btn-primary btn-lg open-booking">Записаться онлайн</button><a class="btn btn-outline btn-lg" href="tel:+74951204567"><svg><use href="#i-phone"/></svg>Позвонить</a></div>
-          <div class="hero-stats">
-            <div><span class="stat-icon">24/7</span><strong>24/7</strong><small>срочная помощь</small></div>
-            <div><svg><use href="#i-heart"/></svg><strong>15+ лет</strong><small>опыта работы</small></div>
-            <div><svg><use href="#i-star"/></svg><strong>4.9</strong><small>рейтинг клиники<br>на Яндекс</small></div>
-          </div>
-        </div>
-      </div>
-      <a class="call-tab" href="tel:+74951204567"><svg><use href="#i-phone"/></svg><span>Позвонить<br>нам</span></a>
-    </section>
-
-    <section class="section selector-section">
-      <div class="container selector-card">
-        <div class="section-heading"><h2>Подберите услугу для питомца</h2><p>Ответьте на несколько вопросов — подскажем, что нужно вашему питомцу</p></div>
-        <div class="selector-grid">
-          <div class="quiz">
-            <fieldset><legend>Кто ваш питомец?</legend><div class="choice-row"><button class="choice active" data-pet="Кошка">🐱 <span>Кошка</span></button><button class="choice" data-pet="Собака">🐕 <span>Собака</span></button></div></fieldset>
-            <fieldset><legend>Что беспокоит?</legend><div class="chips"><button class="chip active" data-service="Первичный осмотр">Осмотр</button><button class="chip" data-service="Вакцинация">Вакцинация</button><button class="chip" data-service="Диагностика">Хромота</button><button class="chip" data-service="Диагностика">Рвота</button><button class="chip" data-service="Стоматология">Зубы</button></div></fieldset>
-            <button class="btn btn-primary btn-lg quiz-submit">Показать рекомендацию</button>
-          </div>
-          <div class="recommendation"><span class="badge">Рекомендуем</span><h3 data-rec-title>Первичный осмотр</h3><p data-rec-copy>Общий осмотр, оценка состояния здоровья и консультация врача.</p><strong>от 1 500 ₽</strong><a href="#services">Подробнее <span>›</span></a></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section why">
-      <div class="container"><div class="section-heading centered"><h2>Почему выбирают VetCare</h2></div>
-        <div class="feature-grid">
-          <article class="feature"><div class="circle-icon"><svg><use href="#i-vet"/></svg></div><h3>Опытные врачи</h3><p>В нашей клинике работают сертифицированные специалисты с опытом от 5 лет.</p></article>
-          <article class="feature"><div class="circle-icon"><svg><use href="#i-monitor"/></svg></div><h3>Собственная диагностика</h3><p>Современное оборудование для точной диагностики на месте и быстро.</p></article>
-          <article class="feature"><div class="circle-icon"><span>24/7</span></div><h3>Срочный прием</h3><p>Мы готовы помочь вашему питомцу круглосуточно, без выходных.</p></article>
-          <article class="feature"><div class="circle-icon"><svg><use href="#i-bell"/></svg></div><h3>Напоминания и сопровождение</h3><p>Напоминаем о визитах и всегда на связи после приема.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section doctors" id="doctors">
-      <div class="container"><div class="section-heading row-heading"><h2>Наши врачи</h2><button class="text-link show-doctors">Смотреть всех врачей <span>›</span></button></div>
-        <div class="doctor-grid">
-          <article class="doctor-card"><div class="doctor-photo photo-1"></div><div><h3>Анна Смирнова</h3><em>Терапевт</em><p>Опыт работы 8 лет</p><p>Специализируется на терапии кошек и собак, профилактике заболеваний и ведении пациентов.</p><button class="text-link open-booking" data-doctor="Анна Смирнова">Подробнее <span>›</span></button></div></article>
-          <article class="doctor-card"><div class="doctor-photo photo-2"></div><div><h3>Игорь Лебедев</h3><em>Хирург</em><p>Опыт работы 12 лет</p><p>Проводит мягкотканные и ортопедические операции, в том числе повышенной сложности.</p><button class="text-link open-booking" data-doctor="Игорь Лебедев">Подробнее <span>›</span></button></div></article>
-          <article class="doctor-card"><div class="doctor-photo photo-3"></div><div><h3>Мария Кузнецова</h3><em>Дерматолог</em><p>Опыт работы 6 лет</p><p>Диагностика и лечение кожных заболеваний, аллергий и ушных патологий.</p><button class="text-link open-booking" data-doctor="Мария Кузнецова">Подробнее <span>›</span></button></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services" id="services">
-      <div class="container"><div class="section-heading"><h2>Услуги клиники</h2><p>Современная ветеринарная помощь для здоровья и долголетия вашего питомца.</p></div>
-        <div class="tabs" role="tablist"><button class="tab active" data-filter="all">Все услуги</button><button class="tab" data-filter="diagnostic">Диагностика</button><button class="tab" data-filter="treatment">Лечение</button><button class="tab" data-filter="prevention">Профилактика</button><button class="tab" data-filter="surgery">Хирургия</button><button class="tab" data-filter="dentistry">Стоматология</button></div>
-        <div class="service-grid">
-          <article class="service-card" data-category="treatment"><div class="service-icon"><svg><use href="#i-steth"/></svg></div><div><h3>Первичный осмотр</h3><p>Комплексный осмотр, оценка состояния здоровья и консультация врача.</p><strong>от 1 500 ₽</strong><button class="text-link open-booking" data-service-name="Первичный осмотр">Подробнее <span>›</span></button></div></article>
-          <article class="service-card" data-category="prevention"><div class="service-icon"><svg><use href="#i-syringe"/></svg></div><div><h3>Вакцинация</h3><p>Подбор вакцины и проведение прививок с учетом возраста и образа жизни питомца.</p><strong>от 1 200 ₽</strong><button class="text-link open-booking" data-service-name="Вакцинация">Подробнее <span>›</span></button></div></article>
-          <article class="service-card" data-category="diagnostic"><div class="service-icon"><svg><use href="#i-monitor"/></svg></div><div><h3>УЗИ и диагностика</h3><p>Ультразвуковая диагностика органов и тканей, постановка точного диагноза.</p><strong>от 2 500 ₽</strong><button class="text-link open-booking" data-service-name="УЗИ и диагностика">Подробнее <span>›</span></button></div></article>
-          <article class="service-card" data-category="surgery"><div class="service-icon"><svg><use href="#i-scalpel"/></svg></div><div><h3>Хирургия</h3><p>Плановые и экстренные операции любой сложности с безопасной анестезией.</p><strong>от 5 000 ₽</strong><button class="text-link open-booking" data-service-name="Хирургия">Подробнее <span>›</span></button></div></article>
-          <article class="service-card" data-category="dentistry"><div class="service-icon"><svg><use href="#i-tooth"/></svg></div><div><h3>Стоматология</h3><p>Профессиональная чистка зубов, лечение заболеваний полости рта.</p><strong>от 2 000 ₽</strong><button class="text-link open-booking" data-service-name="Стоматология">Подробнее <span>›</span></button></div></article>
-          <article class="service-card" data-category="diagnostic"><div class="service-icon"><svg><use href="#i-flask"/></svg></div><div><h3>Анализы</h3><p>Широкий спектр лабораторных исследований для точной диагностики.</p><strong>от 700 ₽</strong><button class="text-link open-booking" data-service-name="Анализы">Подробнее <span>›</span></button></div></article>
-        </div>
-        <div class="emergency-strip"><div class="emergency-icon"><svg><use href="#i-phone"/></svg><b>24/7</b></div><div><h3>Срочная помощь 24/7</h3><p>Мы всегда на связи и готовы помочь вашему питомцу в экстренной ситуации.</p></div><a class="btn btn-outline" href="tel:+74951204567"><svg><use href="#i-phone"/></svg>+7 (495) 120-45-67</a><a class="btn btn-primary" href="tel:+74951204567">Позвонить сейчас</a></div>
-      </div>
-    </section>
-
-    <section class="section cases" id="cases">
-      <div class="container"><div class="section-heading"><h2>Кейсы и результаты</h2><p>Реальные примеры нашей работы</p></div>
-        <div class="case-grid">
-          <article class="case-card"><div class="case-photo case-1"></div><h3>Кот с отказом от еды</h3><p><b>Проблема:</b><br>отказ от еды, вялость</p><p><b>Что сделали:</b><br>провели диагностику, выявили проблемы с ЖКТ, назначили лечение</p><p><b>Результат:</b><br>через 3 дня кот вернулся к активной жизни и аппетиту</p><button class="text-link case-more" data-case="Кот с отказом от еды">Подробнее о случае <span>›</span></button></article>
-          <article class="case-card"><div class="case-photo case-2"></div><h3>Собака после травмы лапы</h3><p><b>Проблема:</b><br>хромота после падения</p><p><b>Что сделали:</b><br>рентген, лечение и физиотерапия</p><p><b>Результат:</b><br>через 4 недели собака полностью восстановилась</p><button class="text-link case-more" data-case="Собака после травмы лапы">Подробнее о случае <span>›</span></button></article>
-          <article class="case-card"><div class="case-photo case-3"></div><h3>Щенок с кожной аллергией</h3><p><b>Проблема:</b><br>зуд, покраснения, высыпания</p><p><b>Что сделали:</b><br>диагностика, гипоаллергенная диета, терапия</p><p><b>Результат:</b><br>симптомы прошли, щенок здоров и активен</p><button class="text-link case-more" data-case="Щенок с кожной аллергией">Подробнее о случае <span>›</span></button></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process">
-      <div class="container"><div class="section-heading"><h2>Как мы работаем</h2><p>Простой и понятный процесс для заботы о вашем питомце</p></div>
-        <div class="steps">
-          <article><span class="step-num">1</span><svg><use href="#i-calendar"/></svg><h3>Оставляете заявку</h3><p>Выберите услугу и удобное время на сайте или позвоните нам.</p></article>
-          <article><span class="step-num">2</span><svg><use href="#i-phone"/></svg><h3>Подтверждаем запись</h3><p>Администратор свяжется с вами для подтверждения визита.</p></article>
-          <article><span class="step-num">3</span><svg><use href="#i-steth"/></svg><h3>Прием и диагностика</h3><p>Проводим осмотр, диагностику и назначаем необходимое лечение.</p></article>
-          <article><span class="step-num">4</span><svg><use href="#i-heart"/></svg><h3>Рекомендации и сопровождение</h3><p>Даем рекомендации и остаемся на связи для вашего спокойствия.</p></article>
-        </div>
-        <div class="booking-banner"><div class="banner-pets"></div><div><h3>Запишитесь онлайн — это быстро и удобно</h3><p>Выберите удобное время, и мы позаботимся о вашем питомце.</p></div><div><button class="btn btn-primary open-booking"><svg><use href="#i-calendar"/></svg>Записаться онлайн</button><a href="tel:+74951204567"><svg><use href="#i-phone"/></svg>+7 (495) 120-45-67</a></div></div>
-      </div>
-    </section>
-
-    <section class="section prices" id="prices">
-      <div class="container"><div class="section-heading"><h2>Цены и пакеты</h2></div>
-        <div class="price-grid">
-          <article class="price-card"><h3>Базовый осмотр</h3><p>Для регулярной заботы<br>о здоровье питомца</p><strong>1 500 ₽</strong><ul><li>Первичный осмотр</li><li>Консультация врача</li><li>Измерение температуры</li><li>Общие рекомендации</li></ul><button class="btn btn-outline open-booking" data-service-name="Базовый осмотр">Выбрать пакет</button></article>
-          <article class="price-card"><h3>Комплексный чекап</h3><p>Полная диагностика<br>здоровья</p><strong>3 900 ₽</strong><ul><li>Осмотр и консультация</li><li>Общий анализ крови</li><li>Анализ мочи</li><li>УЗИ брюшной полости</li><li>Рекомендации по питанию</li></ul><button class="btn btn-outline open-booking" data-service-name="Комплексный чекап">Выбрать пакет</button></article>
-          <article class="price-card featured"><span class="price-label">Выгодно</span><h3>Годовая профилактика</h3><p>Забота и защита<br>на целый год</p><strong>6 900 ₽</strong><ul><li>Два плановых осмотра</li><li>Все обязательные прививки</li><li>Обработка от паразитов</li><li>Скидка 10% на услуги</li></ul><button class="btn btn-primary open-booking" data-service-name="Годовая профилактика">Выбрать пакет</button></article>
-          <article class="price-card urgent"><span class="price-label">24/7</span><h3>Срочная помощь</h3><p>Помощь в экстренных<br>ситуациях 24/7</p><strong>от 3 000 ₽</strong><ul><li>Неотложная помощь</li><li>Стабилизация состояния</li><li>Диагностика на месте</li><li>Госпитализация при необходимости</li></ul><a class="btn btn-danger" href="tel:+74951204567">Вызвать врача</a></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section reviews" id="reviews">
-      <div class="container"><div class="section-heading"><h2>Отзывы владельцев</h2></div>
-        <div class="review-grid">
-          <article><div class="stars">★★★★★</div><div class="reviewer"><span class="avatar pet-cat">🐱</span><p><b>Ольга С.</b><small>Кошка Мурка</small></p></div><p>Очень внимательные врачи и чуткое отношение к животным. Быстро нашли проблему и назначили лечение.</p></article>
-          <article><div class="stars">★★★★★</div><div class="reviewer"><span class="avatar pet-dog">🐶</span><p><b>Дмитрий К.</b><small>Собака Бакс</small></p></div><p>Обращаемся в VetCare уже больше года. Нравится высокий профессионализм и современные методы диагностики.</p></article>
-          <article><div class="stars">★★★★★</div><div class="reviewer"><span class="avatar pet-cat">🐈</span><p><b>Анна Л.</b><small>Кот Барсик</small></p></div><p>Удобная онлайн-запись и минимум ожидания. Делали вакцинацию — все прошло спокойно и без стресса.</p></article>
-          <article><div class="stars">★★★★★</div><div class="reviewer"><span class="avatar pet-rabbit">🐰</span><p><b>Ирина М.</b><small>Кролик Пушок</small></p></div><p>Спасибо за помощь в экстренной ситуации ночью. Врач приехал быстро и спас нашего Пушка.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section faq">
-      <div class="container"><div class="section-heading"><h2>Частые вопросы</h2></div>
-        <div class="accordion">
-          <article class="faq-item"><button><span>Как получить срочную помощь ночью или в выходные?</span><b>+</b></button><div>Мы работаем круглосуточно. Позвоните нам по телефону +7 (495) 120-45-67 — дежурный врач проконсультирует и при необходимости примет вас в клинике.</div></article>
-          <article class="faq-item"><button><span>Можно ли записаться на прием онлайн?</span><b>+</b></button><div>Да, вы можете выбрать удобное время и услугу на сайте. После записи мы отправим подтверждение на телефон.</div></article>
-          <article class="faq-item"><button><span>Как подготовить питомца к вакцинации?</span><b>+</b></button><div>За 10–14 дней обработайте питомца от паразитов. На прием животное должно прийти клинически здоровым.</div></article>
-          <article class="faq-item"><button><span>Проводите ли вы анализы и диагностику на месте?</span><b>+</b></button><div>Да, в клинике есть лаборатория, УЗИ и современное диагностическое оборудование.</div></article>
-          <article class="faq-item"><button><span>Сколько длится прием у ветеринара?</span><b>+</b></button><div>Обычный прием занимает 30–40 минут, а длительность диагностических процедур зависит от показаний.</div></article>
-          <article class="faq-item"><button><span>Есть ли парковка возле клиники?</span><b>+</b></button><div>Да, для посетителей клиники предусмотрена бесплатная парковка во дворе.</div></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contacts">
-      <div class="container contact-card">
-        <form class="inline-form" id="contact-form"><h2>Запишитесь на прием</h2><p>Оставьте заявку — мы свяжемся с вами и подберем удобное время.</p><div class="form-grid"><label>Ваше имя<input required name="name" placeholder="Иван Иванов"></label><label>Телефон<input required name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__"></label><label>Имя питомца<input name="pet" placeholder="Кличка питомца"></label><label>Услуга<select name="service"><option>Выберите услугу</option><option>Первичный осмотр</option><option>Вакцинация</option><option>Диагностика</option><option>Хирургия</option></select></label></div><label>Комментарий к заявке (необязательно)<textarea name="comment" placeholder="Опишите симптомы или задайте вопрос"></textarea></label><label class="consent"><input type="checkbox" required> Я согласен на обработку персональных данных</label><button class="btn btn-primary" type="submit">Отправить заявку</button></form>
-        <div class="contact-info"><div class="contact-copy"><h3>Наши контакты</h3><p><svg><use href="#i-pin"/></svg>г. Москва, Большой Саввинский пер., д. 9</p><a href="tel:+74951204567"><svg><use href="#i-phone"/></svg>+7 (495) 120-45-67</a><a href="mailto:info@vetcare.ru"><svg><use href="#i-mail"/></svg>info@vetcare.ru</a><p><svg><use href="#i-clock"/></svg>Пн–Пт: 09:00 – 21:00<br><span>Сб–Вс: 10:00 – 20:00</span></p><a class="btn btn-outline" href="tel:+74951204567">Позвонить сейчас</a><a class="btn btn-danger" href="tel:+74951204567">Срочная помощь 24/7</a></div><div class="map"><span class="map-pin"><svg><use href="#i-pin"/></svg></span><span class="road road-1"></span><span class="road road-2"></span><span class="road road-3"></span><b>Большой Саввинский пер.</b></div></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-grid"><div><a class="logo" href="#top"><svg><use href="#i-paw"/></svg><span>VetCare</span></a><p>Забота о ваших питомцах —<br>наша профессия.</p><div class="socials"><a href="https://vk.com" target="_blank" rel="noopener" aria-label="ВКонтакте"><svg><use href="#i-vk"/></svg></a><a href="https://t.me" target="_blank" rel="noopener" aria-label="Telegram"><svg><use href="#i-telegram"/></svg></a><a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg><use href="#i-instagram"/></svg></a></div></div><div><h4>Навигация</h4><a href="#services">Услуги</a><a href="#doctors">Врачи</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></div><div><h4>Услуги</h4><a href="#services">Терапия</a><a href="#services">Хирургия</a><a href="#services">Диагностика</a><a href="#services">Вакцинация</a><a href="#services">Стоматология</a></div><div><h4>Контакты</h4><a href="tel:+74951204567"><svg><use href="#i-phone"/></svg>+7 (495) 120-45-67</a><a href="mailto:info@vetcare.ru"><svg><use href="#i-mail"/></svg>info@vetcare.ru</a><p><svg><use href="#i-pin"/></svg>г. Москва, Большой Саввинский пер., д. 9</p></div><div><h4>Мы работаем</h4><p>Пн–Пт: &nbsp;09:00 – 21:00</p><p>Сб–Вс: &nbsp;10:00 – 20:00</p></div></div>
-    <div class="container footer-bottom"><span>© 2026 VetCare. Все права защищены.</span><span>Демонстрационный проект SHERER</span><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a><span>Сделано с <b>♥</b> для ваших питомцев</span></div>
-  </footer>
-
-  <div class="modal" id="booking-modal" aria-hidden="true"><div class="modal-backdrop" data-close></div><section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="booking-title"><button class="modal-close" data-close aria-label="Закрыть">×</button><span class="badge">Онлайн-запись</span><h2 id="booking-title">Записать питомца на прием</h2><p>Оставьте контакты — администратор подтвердит удобное время в течение 10 минут.</p><form id="booking-form"><div class="form-grid"><label>Ваше имя<input required name="name" placeholder="Как к вам обращаться"></label><label>Телефон<input required name="phone" inputmode="tel" placeholder="+7 (___) ___-__-__"></label><label>Имя питомца<input required name="pet" placeholder="Например, Бакс"></label><label>Услуга<select name="service"><option>Первичный осмотр</option><option>Вакцинация</option><option>Диагностика</option><option>Хирургия</option><option>Стоматология</option></select></label><label>Дата<input required type="date" name="date"></label><label>Удобное время<select name="time"><option>09:00–12:00</option><option>12:00–16:00</option><option>16:00–20:00</option></select></label></div><button class="btn btn-primary btn-lg" type="submit">Подтвердить запись</button></form></section></div>
-  <div class="toast" role="status" aria-live="polite"></div>
-  <script src="app.js"></script>
-</body>
+    <div class="modal" id="details-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close></div>
+      <section
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="details-title"
+      >
+        <button class="modal-close" data-close aria-label="Закрыть">×</button
+        ><span class="badge" id="details-label"></span>
+        <h2 id="details-title"></h2>
+        <div class="details-copy" id="details-copy"></div>
+      </section>
+    </div>
+    <div class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
 </html>
