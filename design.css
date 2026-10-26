@@ -42,14 +42,14 @@
 }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 106px;
+  scroll-padding-top: 120px;
 }
 body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
   font-family: Onest, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
@@ -114,7 +114,7 @@ textarea:focus {
   overflow: hidden;
 }
 .container {
-  width: min(1280px, calc(100% - 96px));
+  width: min(1520px, calc(100% - 96px));
   margin-inline: auto;
 }
 .skip-link {
@@ -131,7 +131,7 @@ textarea:focus {
   top: 12px;
 }
 .site-header {
-  height: 98px;
+  height: 108px;
   position: sticky;
   top: 0;
   z-index: 40;
@@ -153,7 +153,7 @@ textarea:focus {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 29px;
+  font-size: 35px;
   font-weight: 750;
   letter-spacing: -1.4px;
   line-height: 1.1;
@@ -167,7 +167,7 @@ textarea:focus {
 }
 .logo small {
   display: block;
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 450;
   letter-spacing: 1.35px;
   text-transform: uppercase;
@@ -180,7 +180,7 @@ textarea:focus {
   margin: auto;
 }
 .nav a {
-  font-size: 13px;
+  font-size: 17px;
   position: relative;
   padding: 12px 0;
 }
@@ -203,7 +203,7 @@ textarea:focus {
   align-items: center;
   gap: 9px;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 17px;
   white-space: nowrap;
 }
 .header-phone svg {
@@ -216,10 +216,10 @@ textarea:focus {
   justify-content: center;
   gap: 22px;
   padding: 0 25px;
-  min-height: 50px;
+  min-height: 58px;
   border-radius: 9px;
   border: 1px solid transparent;
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 550;
   transition:
     background 0.25s,
@@ -230,8 +230,8 @@ textarea:focus {
   transform: translateY(-2px);
 }
 .btn svg {
-  width: 19px;
-  height: 19px;
+  width: 22px;
+  height: 22px;
   transition: transform 0.25s;
 }
 .btn:hover svg {
@@ -262,9 +262,9 @@ textarea:focus {
   background: #fbefe6;
 }
 .btn-lg {
-  min-height: 57px;
+  min-height: 62px;
   padding-inline: 28px;
-  font-size: 14px;
+  font-size: 18px;
 }
 .menu-toggle {
   display: none;
@@ -294,7 +294,7 @@ textarea:focus {
 }
 .eyebrow {
   color: var(--green);
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 650;
   letter-spacing: 1.75px;
   text-transform: uppercase;
@@ -330,7 +330,7 @@ em {
   font-weight: 500;
 }
 .hero h1 {
-  font-size: clamp(54px, 5.25vw, 77px);
+  font-size: clamp(60px, 5.6vw, 96px);
   line-height: 1.08;
   letter-spacing: -3.9px;
   position: relative;
@@ -350,7 +350,7 @@ em {
   margin-left: 25px;
 }
 .hero-lead {
-  font-size: 15px;
+  font-size: 19px;
   color: #70766b;
   line-height: 1.75;
   margin-bottom: 28px;
@@ -361,20 +361,20 @@ em {
   gap: 24px;
 }
 .hero-service-link {
-  font-size: 11px;
+  font-size: 15px;
   border-bottom: 1px solid #9ca793;
   padding-bottom: 6px;
   line-height: 1.4;
 }
 .hero-service-link span {
-  font-size: 16px;
+  font-size: 20px;
   margin-left: 7px;
 }
 .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-top: 38px;
-  max-width: 510px;
+  max-width: 620px;
   gap: 20px;
 }
 .hero-stats > div {
@@ -389,7 +389,7 @@ em {
   padding: 0;
 }
 .hero-stats strong {
-  font-size: 29px;
+  font-size: 35px;
   line-height: 1.1;
   letter-spacing: -1.2px;
   font-weight: 500;
@@ -397,11 +397,11 @@ em {
 }
 .hero-stats strong span {
   color: #9aab7c;
-  font-size: 20px;
+  font-size: 24px;
   margin-left: 3px;
 }
 .hero-stats small {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .hero-visual {
@@ -450,20 +450,20 @@ em {
 }
 .hero-photo-note b {
   display: block;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 3px;
 }
 .hero-photo-note div > span {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .hero-caption {
   position: absolute;
   bottom: 0;
   right: 8px;
-  font-size: 9px;
+  font-size: 13px;
   color: var(--muted);
   letter-spacing: 0.3px;
 }
@@ -484,7 +484,7 @@ em {
   border-bottom: 1px solid var(--line);
   padding: 28px 0 23px;
   margin-top: 15px;
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .hero-bottom a {
@@ -493,7 +493,7 @@ em {
   gap: 24px;
 }
 .hero-bottom a span {
-  font-size: 20px;
+  font-size: 24px;
   color: var(--green);
 }
 .section {
@@ -503,7 +503,7 @@ em {
   margin-bottom: 40px;
 }
 .section-heading h2 {
-  font-size: clamp(32px, 3.5vw, 48px);
+  font-size: clamp(38px, 4vw, 60px);
   font-weight: 450;
   letter-spacing: -1.9px;
   line-height: 1.2;
@@ -514,7 +514,7 @@ em {
 }
 .section-heading p:not(.eyebrow) {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.8;
   margin: 0;
 }
@@ -531,8 +531,8 @@ em {
   margin-bottom: 0;
 }
 .section-heading .section-intro {
-  max-width: 330px;
-  font-size: 12px;
+  max-width: 440px;
+  font-size: 16px;
   padding-bottom: 4px;
 }
 .text-link {
@@ -544,14 +544,14 @@ em {
   border-bottom: 1px solid #bcc5b2;
   padding: 0 0 6px;
   color: var(--green);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 550;
   transition:
     color 0.25s,
     gap 0.25s;
 }
 .text-link span {
-  font-size: 19px;
+  font-size: 23px;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -578,16 +578,16 @@ em {
   padding-bottom: 10px;
 }
 .selector-card .section-heading h2 {
-  font-size: 37px;
+  font-size: 44px;
   line-height: 1.25;
-  max-width: 350px;
+  max-width: 500px;
 }
 .selector-card .section-heading h2 em {
   display: block;
 }
 .selector-card .section-heading p:not(.eyebrow) {
-  font-size: 12px;
-  max-width: 280px;
+  font-size: 16px;
+  max-width: 420px;
 }
 .selector-grid {
   display: contents;
@@ -603,12 +603,12 @@ em {
   margin: 0 0 21px;
 }
 .quiz legend {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 600;
   margin-bottom: 11px;
 }
 .quiz legend > span {
-  font-size: 10px;
+  font-size: 14px;
   color: #8a947d;
   margin-right: 10px;
   font-weight: 400;
@@ -626,7 +626,7 @@ em {
   align-items: center;
   padding: 13px 16px;
   gap: 13px;
-  font-size: 12px;
+  font-size: 16px;
   transition: 0.2s;
 }
 .choice svg {
@@ -659,7 +659,7 @@ em {
   background: transparent;
   border-radius: 7px;
   padding: 9px 13px;
-  font-size: 11px;
+  font-size: 15px;
   transition: 0.2s;
 }
 .chip:hover,
@@ -673,7 +673,7 @@ em {
 }
 .quiz-submit {
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .recommendation {
   grid-column: 2;
@@ -698,7 +698,7 @@ em {
 }
 .badge {
   display: inline-block;
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 0.5px;
   border: 1px solid #8ca58c;
   padding: 5px 10px;
@@ -712,20 +712,20 @@ em {
   stroke-width: 1.1;
 }
 .recommendation h3 {
-  font-size: 31px;
+  font-size: 37px;
   letter-spacing: -1px;
   line-height: 1.25;
   margin-bottom: 15px;
 }
 .recommendation > p {
   color: #cbd8c6;
-  font-size: 13px;
-  max-width: 320px;
+  font-size: 17px;
+  max-width: 440px;
   margin-bottom: 30px;
   line-height: 1.8;
 }
 .recommendation strong {
-  font-size: 27px;
+  font-size: 32px;
   font-weight: 500;
   margin-top: auto;
   letter-spacing: -0.7px;
@@ -739,15 +739,15 @@ em {
   background: none;
   color: #fff;
   text-align: left;
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 20px;
 }
 .recommendation-book span {
-  font-size: 24px;
+  font-size: 29px;
   color: #c8d7ae;
 }
 .recommendation > small {
-  font-size: 9px;
+  font-size: 13px;
   color: #adc2a8;
   margin-top: 9px;
 }
@@ -768,28 +768,28 @@ em {
   border-left: 1px solid var(--line);
 }
 .circle-icon {
-  width: 48px;
-  height: 48px;
+  width: 62px;
+  height: 62px;
   display: grid;
   place-items: center;
   background: #e9eddf;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 16px;
   color: #566c42;
 }
 .circle-icon svg {
-  width: 27px;
-  height: 27px;
+  width: 34px;
+  height: 34px;
   stroke-width: 1.4;
 }
 .feature h3 {
-  font-size: 15px;
+  font-size: 19px;
   letter-spacing: -0.3px;
   line-height: 1.45;
   margin: 23px 0 12px;
 }
 .feature p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--muted);
   margin-bottom: 0;
@@ -828,7 +828,7 @@ em {
   position: absolute;
   bottom: 14px;
   right: 16px;
-  font-size: 9px;
+  font-size: 13px;
   letter-spacing: 0.5px;
   color: #fff;
   background: #234f3e9e;
@@ -852,13 +852,13 @@ em {
   align-items: flex-start;
 }
 .doctor-card h3 {
-  font-size: 21px;
+  font-size: 25px;
   letter-spacing: -0.65px;
   margin: 0 0 6px;
 }
 .doctor-card em {
   font-family: Onest, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   display: inline-block;
   background: #e9eddf;
   border-radius: 20px;
@@ -868,13 +868,13 @@ em {
   color: #5e754d;
 }
 .doctor-card p {
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted);
   margin-bottom: 15px;
   line-height: 1.8;
 }
 .doctor-card p:first-of-type {
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: 0.4px;
   color: #5b6752;
   margin-bottom: 10px;
@@ -885,7 +885,7 @@ em {
   padding-top: 14px;
   border: 0;
   border-top: 1px solid var(--line);
-  font-size: 11px;
+  font-size: 15px;
 }
 .services {
   padding: 94px 0 88px;
@@ -898,7 +898,7 @@ em {
 }
 .tab {
   border-radius: 50px;
-  font-size: 11px;
+  font-size: 15px;
   padding: 10px 20px;
 }
 .tab.active {
@@ -917,7 +917,7 @@ em {
   border-radius: 13px;
   padding: 27px;
   position: relative;
-  min-height: 284px;
+  min-height: 350px;
   background: #fdfcf8;
   transition:
     background 0.25s,
@@ -930,7 +930,7 @@ em {
   position: absolute;
   right: 25px;
   top: 22px;
-  font-size: 10px;
+  font-size: 14px;
   color: #b3b7a8;
 }
 .service-card:hover {
@@ -942,36 +942,36 @@ em {
   display: none;
 }
 .service-icon {
-  width: 43px;
-  height: 43px;
+  width: 56px;
+  height: 56px;
   color: #637b4f;
   margin-bottom: 20px;
 }
 .service-icon svg {
-  width: 35px;
-  height: 35px;
+  width: 44px;
+  height: 44px;
   stroke-width: 1.3;
 }
 .service-card > div:last-child {
   display: flex;
   flex-direction: column;
-  min-height: 179px;
+  min-height: 214px;
 }
 .service-card h3 {
-  font-size: 19px;
+  font-size: 23px;
   letter-spacing: -0.6px;
   line-height: 1.3;
   margin: 0 0 12px;
 }
 .service-card p {
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.8;
   margin-bottom: 20px;
   max-width: 285px;
 }
 .service-card strong {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 550;
   margin-top: auto;
 }
@@ -990,11 +990,11 @@ em {
 .service-card .text-link span {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border: 1px solid #c4cbb8;
   border-radius: 50%;
-  font-size: 21px;
+  font-size: 25px;
   transition: 0.25s;
 }
 .service-card .text-link:hover span {
@@ -1029,7 +1029,7 @@ em {
 }
 .emergency-icon b {
   position: absolute;
-  font-size: 8px;
+  font-size: 12px;
   bottom: -4px;
   right: -5px;
   background: #e8ecdf;
@@ -1038,18 +1038,18 @@ em {
   letter-spacing: -0.5px;
 }
 .emergency-strip h3 {
-  font-size: 19px;
+  font-size: 23px;
   letter-spacing: -0.5px;
   margin-bottom: 5px;
 }
 .emergency-strip p {
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted);
   max-width: 360px;
   margin-bottom: 0;
 }
 .emergency-strip .btn {
-  font-size: 11px;
+  font-size: 15px;
   padding: 0 18px;
   gap: 8px;
   min-height: 44px;
@@ -1088,7 +1088,7 @@ em {
   position: absolute;
   left: 15px;
   bottom: 14px;
-  font-size: 8px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   background: rgba(250, 249, 244, 0.94);
   border-radius: 30px;
@@ -1104,7 +1104,7 @@ em {
   background-image: url("assets/case-wide-3.webp");
 }
 .case-card h3 {
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.4;
   letter-spacing: -0.4px;
   margin: 22px 24px 18px;
@@ -1112,12 +1112,12 @@ em {
 }
 .case-card > p {
   margin: 0 24px 14px;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.75;
   color: var(--muted);
 }
 .case-card > p b {
-  font-size: 9px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.7px;
   color: #7f8b70;
@@ -1134,7 +1134,7 @@ em {
 .case-card .case-more {
   margin: 10px 24px 0;
   border-bottom: 0;
-  font-size: 10px;
+  font-size: 14px;
 }
 .process {
   padding: 85px 0 0;
@@ -1154,7 +1154,7 @@ em {
 .step-num {
   display: block;
   font-family: Lora, Georgia, serif;
-  font-size: 37px;
+  font-size: 44px;
   font-style: italic;
   font-weight: 500;
   line-height: 1;
@@ -1174,14 +1174,14 @@ em {
   stroke-width: 1.3;
 }
 .steps h3 {
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.5;
   letter-spacing: -0.35px;
   margin-bottom: 10px;
   max-width: 220px;
 }
 .steps p {
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted);
   line-height: 1.85;
   margin-bottom: 0;
@@ -1189,7 +1189,7 @@ em {
 }
 .booking-banner {
   display: grid;
-  grid-template-columns: 255px 1fr auto;
+  grid-template-columns: 320px 1fr auto;
   gap: 34px;
   background: #dde6cf;
   border-radius: 19px;
@@ -1207,14 +1207,14 @@ em {
   padding: 20px 0;
 }
 .booking-banner h3 {
-  font-size: 25px;
+  font-size: 30px;
   line-height: 1.3;
   letter-spacing: -0.8px;
   margin-bottom: 10px;
   max-width: 390px;
 }
 .booking-banner p {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.8;
   color: #637253;
   max-width: 340px;
@@ -1228,7 +1228,7 @@ em {
   gap: 13px;
 }
 .booking-banner a {
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -1239,7 +1239,7 @@ em {
   height: 14px;
 }
 .booking-banner .btn {
-  font-size: 11px;
+  font-size: 15px;
   gap: 10px;
   padding-inline: 20px;
 }
@@ -1256,27 +1256,27 @@ em {
   flex-direction: column;
   position: relative;
   min-width: 0;
-  min-height: 416px;
+  min-height: 500px;
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 30px 23px 23px;
   background: #fdfcf8;
 }
 .price-card h3 {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.4;
   letter-spacing: -0.5px;
   margin-bottom: 12px;
   min-height: 48px;
 }
 .price-card > p {
-  font-size: 11px;
+  font-size: 15px;
   color: var(--muted);
   margin-bottom: 20px;
   line-height: 1.8;
 }
 .price-card > strong {
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 500;
   letter-spacing: -1px;
   margin-bottom: 20px;
@@ -1291,7 +1291,7 @@ em {
 }
 .price-card li {
   position: relative;
-  font-size: 10px;
+  font-size: 14px;
   line-height: 1.7;
   margin: 9px 0;
   padding-left: 19px;
@@ -1306,7 +1306,7 @@ em {
 .price-card .btn {
   margin-top: auto;
   width: 100%;
-  font-size: 10px;
+  font-size: 14px;
   min-height: 43px;
   padding-inline: 10px;
 }
@@ -1333,7 +1333,7 @@ em {
   position: absolute;
   top: -12px;
   right: 18px;
-  font-size: 9px;
+  font-size: 13px;
   background: #c4d8a6;
   color: var(--green);
   border-radius: 50px;
@@ -1363,7 +1363,7 @@ em {
 }
 .stars {
   color: #a3915b;
-  font-size: 13px;
+  font-size: 17px;
   letter-spacing: 3px;
   order: 0;
   margin-bottom: 18px;
@@ -1383,25 +1383,25 @@ em {
   background: #e4e8da;
   display: grid;
   place-items: center;
-  font-size: 11px;
+  font-size: 15px;
   color: #647052;
   font-weight: 550;
 }
 .reviewer p {
   margin: 0;
-  font-size: 11px;
+  font-size: 15px;
 }
 .reviewer b {
   font-weight: 550;
 }
 .reviewer small {
   display: block;
-  font-size: 9px;
+  font-size: 13px;
   color: var(--muted);
   margin-top: 3px;
 }
 .review-grid > article > p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.9;
   margin: 0;
   color: #5a6654;
@@ -1413,19 +1413,19 @@ em {
   gap: 6px;
 }
 .review-rating b {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 500;
   line-height: 1;
 }
 .review-rating b span {
-  font-size: 11px;
+  font-size: 15px;
   color: #a3915b;
   letter-spacing: 3px;
   margin-left: 10px;
   vertical-align: middle;
 }
 .review-rating small {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 .faq {
@@ -1438,15 +1438,15 @@ em {
   gap: 65px;
 }
 .faq .section-heading h2 {
-  font-size: 39px;
+  font-size: 47px;
 }
 .faq .section-heading > p:not(.eyebrow) {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.9;
   margin: 24px 0;
 }
 .faq .section-heading .text-link {
-  font-size: 13px;
+  font-size: 17px;
 }
 .accordion {
   align-self: start;
@@ -1465,12 +1465,12 @@ em {
   padding: 16px 0;
   gap: 20px;
   background: none;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 1.65;
 }
 .faq-item > button b {
-  font-size: 23px;
+  font-size: 28px;
   font-weight: 300;
   color: #81916e;
   flex-shrink: 0;
@@ -1480,7 +1480,7 @@ em {
 .faq-item > div {
   display: none;
   padding: 0 35px 22px 0;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.9;
   color: var(--muted);
 }
@@ -1500,14 +1500,14 @@ em {
   gap: 75px;
 }
 .inline-form h2 {
-  font-size: 39px;
+  font-size: 47px;
   letter-spacing: -1.8px;
   line-height: 1.2;
   margin: 0 0 16px;
   font-weight: 450;
 }
 .inline-form > p {
-  font-size: 12px;
+  font-size: 16px;
   max-width: 330px;
   color: var(--muted);
   line-height: 1.8;
@@ -1522,7 +1522,7 @@ em {
 .modal-card label {
   display: flex;
   flex-direction: column;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   gap: 7px;
 }
@@ -1535,7 +1535,7 @@ textarea {
   background: #fffef9;
   padding: 11px 13px;
   min-height: 43px;
-  font-size: 13px;
+  font-size: 17px;
   transition: border 0.2s;
 }
 input::placeholder,
@@ -1558,7 +1558,7 @@ textarea {
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 400;
   color: var(--muted);
 }
@@ -1573,10 +1573,10 @@ textarea {
 .inline-form > .btn {
   width: 100%;
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .form-note {
-  font-size: 9px;
+  font-size: 13px;
   color: #89917d;
   margin: 12px 0 0;
 }
@@ -1594,7 +1594,7 @@ textarea {
   gap: 14px 18px;
 }
 .contact-copy h3 {
-  font-size: 21px;
+  font-size: 25px;
   letter-spacing: -0.6px;
   grid-column: 1/-1;
   margin-bottom: 6px;
@@ -1604,7 +1604,7 @@ textarea {
   display: flex;
   align-items: flex-start;
   gap: 8px;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.9;
   margin: 0;
 }
@@ -1634,7 +1634,7 @@ textarea {
 }
 .contact-copy .btn {
   width: 100%;
-  font-size: 10px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1717,7 +1717,7 @@ textarea {
   background: #fffef5;
   padding: 4px 12px;
   border-radius: 30px;
-  font-size: 8px;
+  font-size: 12px;
   z-index: 3;
   font-weight: 500;
 }
@@ -1734,7 +1734,7 @@ textarea {
   border-radius: 6px;
   background: #fffef6;
   padding: 5px 9px;
-  font-size: 9px;
+  font-size: 13px;
 }
 .footer {
   background: var(--green-dark);
@@ -1755,14 +1755,14 @@ textarea {
   gap: 9px;
 }
 .footer .logo {
-  font-size: 29px;
+  font-size: 35px;
   margin-bottom: 11px;
 }
 .footer .logo svg {
   fill: #b9cfa3;
 }
 .footer h4 {
-  font-size: 10px;
+  font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #b3c4a9;
@@ -1771,7 +1771,7 @@ textarea {
 }
 .footer p,
 .footer a:not(.logo) {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.9;
   color: #c1cfb8;
   margin: 0;
@@ -1818,7 +1818,7 @@ textarea {
   flex-wrap: wrap;
   gap: 12px 20px;
   justify-content: space-between;
-  font-size: 8px;
+  font-size: 12px;
   color: #9eb596;
   margin-top: 45px;
 }
@@ -1875,7 +1875,7 @@ textarea {
   width: 31px;
   height: 31px;
   background: #e6eadc;
-  font-size: 23px;
+  font-size: 28px;
   line-height: 1;
   display: grid;
   place-items: center;
@@ -1884,18 +1884,18 @@ textarea {
 .modal-card .badge {
   color: var(--green);
   border-color: #cad3bd;
-  font-size: 9px;
+  font-size: 13px;
   margin-bottom: 20px;
 }
 .modal-card h2 {
-  font-size: 34px;
+  font-size: 41px;
   letter-spacing: -1.4px;
   line-height: 1.2;
   margin-bottom: 16px;
   font-weight: 450;
 }
 .modal-card > p {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--muted);
   margin-bottom: 26px;
@@ -1918,7 +1918,7 @@ textarea {
   box-shadow: 0 10px 30px #183e3633;
   padding: 16px 24px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 16px;
   transition: 0.3s;
   max-width: calc(100% - 30px);
   text-align: center;
@@ -1930,7 +1930,7 @@ textarea {
   transform: translate(-50%, 0);
 }
 .details-copy {
-  font-size: 13px;
+  font-size: 17px;
   color: var(--muted);
   line-height: 1.85;
 }
@@ -1960,7 +1960,7 @@ textarea {
   border-bottom: 1px solid var(--line);
   width: 100%;
   text-align: left;
-  font-size: 13px;
+  font-size: 17px;
 }
 .team-choice img {
   width: 55px;
@@ -1973,31 +1973,31 @@ textarea {
   color: #768950;
 }
 .doctor-card p {
-  font-size: 13px;
+  font-size: 17px;
 }
 .service-card p {
-  font-size: 13px;
+  font-size: 17px;
 }
 .feature p {
-  font-size: 13px;
+  font-size: 17px;
 }
 .case-card > p {
-  font-size: 13px;
+  font-size: 17px;
 }
 .price-card li {
-  font-size: 12px;
+  font-size: 16px;
 }
 .review-grid > article > p {
-  font-size: 13px;
+  font-size: 17px;
 }
 .steps p {
-  font-size: 13px;
+  font-size: 17px;
 }
 .faq-item > button {
-  font-size: 14px;
+  font-size: 18px;
 }
 .faq-item > div {
-  font-size: 13px;
+  font-size: 17px;
 }
 .reveal {
   animation: fade-in 0.65s var(--ease) both;
@@ -2018,7 +2018,7 @@ textarea {
     padding-top: 55px;
   }
   .hero h1 {
-    font-size: 80px;
+    font-size: 96px;
   }
   .hero-photo {
     aspect-ratio: 1;
@@ -2048,7 +2048,7 @@ textarea {
     margin-bottom: 16px;
   }
   .hero-lead {
-    font-size: 13px;
+    font-size: 17px;
     margin-bottom: 22px;
   }
   .hero-stats {
@@ -2063,7 +2063,7 @@ textarea {
     margin-top: 5px;
   }
   .hero-stats strong {
-    font-size: 27px;
+    font-size: 32px;
   }
 }
 @media (max-width: 1200px) {
@@ -2083,13 +2083,13 @@ textarea {
     gap: 30px;
   }
   .hero h1 {
-    font-size: 63px;
+    font-size: 76px;
   }
   .hero-actions {
     gap: 17px;
   }
   .hero-service-link {
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero .btn-lg {
     padding-inline: 22px;
@@ -2099,7 +2099,7 @@ textarea {
     padding: 13px;
   }
   .hero-photo-note b {
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero-stats {
     gap: 12px;
@@ -2109,7 +2109,7 @@ textarea {
     gap: 25px 38px;
   }
   .selector-card .section-heading h2 {
-    font-size: 33px;
+    font-size: 40px;
   }
   .recommendation {
     padding: 28px;
@@ -2127,13 +2127,13 @@ textarea {
     padding-right: 26px;
   }
   .booking-banner h3 {
-    font-size: 22px;
+    font-size: 26px;
   }
   .price-card {
     padding: 25px 18px 20px;
   }
   .price-card h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
   .contact-card {
     gap: 40px;
@@ -2142,12 +2142,12 @@ textarea {
     gap: 22px;
   }
   .nav a {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media (max-width: 1050px) {
   .hero h1 {
-    font-size: 54px;
+    font-size: 65px;
     letter-spacing: -2.9px;
   }
   .hero-flower {
@@ -2156,7 +2156,7 @@ textarea {
     margin-left: 15px;
   }
   .hero-lead {
-    font-size: 13px;
+    font-size: 17px;
   }
   .hero-service-link {
     display: none;
@@ -2172,13 +2172,13 @@ textarea {
     padding: 12px;
   }
   .hero-photo-note b {
-    font-size: 9px;
+    font-size: 13px;
   }
   .hero-photo-note div > span {
-    font-size: 9px;
+    font-size: 13px;
   }
   .hero-caption {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero-spark {
     width: 40px;
@@ -2187,17 +2187,17 @@ textarea {
     top: 15px;
   }
   .hero-content > .eyebrow {
-    font-size: 8px;
+    font-size: 12px;
     letter-spacing: 1.1px;
   }
   .section {
     padding-block: 72px;
   }
   .section-heading h2 {
-    font-size: 38px;
+    font-size: 46px;
   }
   .section-heading .section-intro {
-    font-size: 11px;
+    font-size: 15px;
   }
   .selector-section {
     padding: 45px 0;
@@ -2207,10 +2207,10 @@ textarea {
     gap: 23px 30px;
   }
   .selector-card .section-heading h2 {
-    font-size: 30px;
+    font-size: 36px;
   }
   .recommendation h3 {
-    font-size: 27px;
+    font-size: 32px;
   }
   .feature-grid {
     gap: 0;
@@ -2222,16 +2222,16 @@ textarea {
     padding-left: 20px;
   }
   .feature h3 {
-    font-size: 14px;
+    font-size: 18px;
   }
   .feature p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .doctor-card > div:last-child {
     padding: 21px;
   }
   .doctor-card h3 {
-    font-size: 18px;
+    font-size: 22px;
   }
   .doctor-grid {
     gap: 17px;
@@ -2240,18 +2240,18 @@ textarea {
     padding: 23px;
   }
   .service-card h3 {
-    font-size: 17px;
+    font-size: 20px;
   }
   .case-grid {
     gap: 16px;
   }
   .case-card h3 {
     margin-inline: 20px;
-    font-size: 16px;
+    font-size: 20px;
   }
   .case-card > p {
     margin-inline: 20px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .case-card .case-more {
     margin-inline: 20px;
@@ -2277,12 +2277,12 @@ textarea {
     aspect-ratio: auto;
   }
   .booking-banner a {
-    font-size: 9px;
+    font-size: 13px;
   }
   .booking-banner .btn {
     min-height: 43px;
     padding-inline: 13px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .price-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2294,27 +2294,27 @@ textarea {
   }
   .price-card h3 {
     min-height: 0;
-    font-size: 19px;
+    font-size: 23px;
   }
   .price-card > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .price-card li {
-    font-size: 11px;
+    font-size: 15px;
   }
   .review-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
   .review-grid > article > p {
-    font-size: 13px;
+    font-size: 17px;
   }
   .faq-layout {
     gap: 38px;
     grid-template-columns: 0.9fr 1.1fr;
   }
   .faq .section-heading h2 {
-    font-size: 34px;
+    font-size: 41px;
   }
   .contact-info {
     padding: 25px;
@@ -2368,10 +2368,10 @@ textarea {
     gap: 18px;
   }
   .logo {
-    font-size: 26px;
+    font-size: 31px;
   }
   .logo small {
-    font-size: 7px;
+    font-size: 11px;
     letter-spacing: 0.8px;
     white-space: nowrap;
   }
@@ -2381,7 +2381,7 @@ textarea {
   }
   .header-inner > .btn {
     min-height: 39px;
-    font-size: 11px;
+    font-size: 15px;
     padding: 0 14px;
     gap: 12px;
     margin-left: auto;
@@ -2413,7 +2413,7 @@ textarea {
     align-items: flex-start;
   }
   .nav a {
-    font-size: 17px;
+    font-size: 20px;
     width: 100%;
     padding: 9px;
   }
@@ -2450,12 +2450,12 @@ textarea {
     margin-left: 17px;
   }
   .hero-content > .eyebrow {
-    font-size: 9px;
+    font-size: 13px;
     letter-spacing: 1.1px;
     margin-bottom: 22px;
   }
   .hero-lead {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 1.8;
     margin-bottom: 25px;
     max-width: 450px;
@@ -2475,10 +2475,10 @@ textarea {
     margin-top: 30px;
   }
   .hero-stats strong {
-    font-size: 27px;
+    font-size: 32px;
   }
   .hero-stats small {
-    font-size: 9px;
+    font-size: 13px;
   }
   .hero-stats > div {
     padding-left: 17px;
@@ -2502,10 +2502,10 @@ textarea {
     gap: 10px;
   }
   .hero-photo-note b {
-    font-size: 10px;
+    font-size: 14px;
   }
   .hero-photo-note div > span {
-    font-size: 9px;
+    font-size: 13px;
   }
   .note-icon {
     width: 35px;
@@ -2516,7 +2516,7 @@ textarea {
     height: 20px;
   }
   .hero-caption {
-    font-size: 8px;
+    font-size: 12px;
     right: 0;
   }
   .hero-spark {
@@ -2527,7 +2527,7 @@ textarea {
   }
   .hero-bottom {
     padding: 16px 0;
-    font-size: 8px;
+    font-size: 12px;
     margin-top: 7px;
   }
   .hero-bottom a {
@@ -2537,7 +2537,7 @@ textarea {
     font-size: 0;
   }
   .hero-bottom a span {
-    font-size: 19px;
+    font-size: 23px;
   }
   .section {
     padding: 58px 0;
@@ -2546,11 +2546,11 @@ textarea {
     margin-bottom: 30px;
   }
   .section-heading h2 {
-    font-size: 35px;
+    font-size: 42px;
     letter-spacing: -1.5px;
   }
   .section-heading .eyebrow {
-    font-size: 9px;
+    font-size: 13px;
     margin-bottom: 15px;
   }
   .row-heading {
@@ -2558,7 +2558,7 @@ textarea {
   }
   .section-heading .section-intro {
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 16px;
     max-width: 420px;
   }
   .section-intro br {
@@ -2579,7 +2579,7 @@ textarea {
     margin-bottom: 27px;
   }
   .selector-card .section-heading h2 {
-    font-size: 32px;
+    font-size: 38px;
     max-width: 400px;
   }
   .selector-card .section-heading h2 em {
@@ -2607,21 +2607,21 @@ textarea {
     margin-bottom: 22px;
   }
   .recommendation h3 {
-    font-size: 28px;
+    font-size: 34px;
   }
   .recommendation > p {
-    font-size: 12px;
+    font-size: 16px;
     margin-bottom: 22px;
     max-width: none;
   }
   .recommendation strong {
-    font-size: 25px;
+    font-size: 30px;
   }
   .recommendation > small {
-    font-size: 9px;
+    font-size: 13px;
   }
   .recommendation-book {
-    font-size: 12px;
+    font-size: 16px;
   }
   .why {
     padding-top: 8px;
@@ -2637,12 +2637,12 @@ textarea {
     border-top: 1px solid var(--line);
   }
   .feature h3 {
-    font-size: 15px;
+    font-size: 19px;
     margin-top: 18px;
     max-width: 220px;
   }
   .feature p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .doctor-grid {
     grid-template-columns: repeat(3, minmax(245px, 1fr));
@@ -2664,13 +2664,13 @@ textarea {
     padding: 22px;
   }
   .doctor-card h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .doctor-card p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .doctor-card .text-link {
-    font-size: 11px;
+    font-size: 15px;
   }
   .tabs {
     gap: 6px;
@@ -2683,7 +2683,7 @@ textarea {
   }
   .tab {
     white-space: nowrap;
-    font-size: 10px;
+    font-size: 14px;
     padding: 9px 16px;
   }
   .service-grid {
@@ -2695,18 +2695,18 @@ textarea {
     min-height: 280px;
   }
   .service-card h3 {
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: -0.4px;
   }
   .service-card p {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.7;
   }
   .service-card > div:last-child {
     min-height: 190px;
   }
   .service-card strong {
-    font-size: 16px;
+    font-size: 20px;
   }
   .service-card .text-link {
     bottom: 19px;
@@ -2715,12 +2715,12 @@ textarea {
   .service-card .text-link span {
     width: 27px;
     height: 27px;
-    font-size: 19px;
+    font-size: 23px;
   }
   .service-card::after {
     right: 20px;
     top: 17px;
-    font-size: 9px;
+    font-size: 13px;
   }
   .service-icon {
     margin-bottom: 17px;
@@ -2739,16 +2739,16 @@ textarea {
     height: 43px;
   }
   .emergency-strip h3 {
-    font-size: 18px;
+    font-size: 22px;
   }
   .emergency-strip p {
-    font-size: 10px;
+    font-size: 14px;
     line-height: 1.8;
   }
   .emergency-strip > .btn-primary {
     grid-column: 1/-1;
     min-height: 44px;
-    font-size: 12px;
+    font-size: 16px;
   }
   .case-grid {
     grid-template-columns: 1fr;
@@ -2763,23 +2763,23 @@ textarea {
   }
   .case-card h3 {
     margin: 22px 23px 16px;
-    font-size: 21px;
+    font-size: 25px;
     min-height: 0;
   }
   .case-card > p {
-    font-size: 12px;
+    font-size: 16px;
     margin-inline: 23px;
     margin-bottom: 15px;
   }
   .case-card > p b {
-    font-size: 10px;
+    font-size: 14px;
   }
   .case-card > p:last-of-type {
     min-height: 0;
   }
   .case-card .case-more {
     margin: 8px 23px 0;
-    font-size: 12px;
+    font-size: 16px;
   }
   .steps {
     grid-template-columns: repeat(2, 1fr);
@@ -2787,10 +2787,10 @@ textarea {
     margin: 35px 0 45px;
   }
   .steps h3 {
-    font-size: 15px;
+    font-size: 19px;
   }
   .steps p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .steps article > svg {
     width: 26px;
@@ -2798,7 +2798,7 @@ textarea {
     top: 26px;
   }
   .step-num {
-    font-size: 34px;
+    font-size: 41px;
     margin-bottom: 22px;
   }
   .booking-banner {
@@ -2818,11 +2818,11 @@ textarea {
     padding: 27px 26px 18px;
   }
   .booking-banner h3 {
-    font-size: 25px;
+    font-size: 30px;
     max-width: 340px;
   }
   .booking-banner p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .booking-banner > div:last-child {
     grid-column: auto;
@@ -2833,10 +2833,10 @@ textarea {
     gap: 15px;
   }
   .booking-banner a {
-    font-size: 10px;
+    font-size: 14px;
   }
   .booking-banner .btn {
-    font-size: 11px;
+    font-size: 15px;
     padding-inline: 16px;
     min-height: 46px;
   }
@@ -2851,23 +2851,23 @@ textarea {
     min-height: 410px;
   }
   .price-card h3 {
-    font-size: 17px;
+    font-size: 20px;
     min-height: 48px;
   }
   .price-card > p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .price-card > strong {
-    font-size: 27px;
+    font-size: 32px;
   }
   .price-card li {
-    font-size: 10px;
+    font-size: 14px;
   }
   .review-grid {
     gap: 25px;
   }
   .review-grid > article > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .review-rating {
     margin-top: 24px;
@@ -2879,43 +2879,43 @@ textarea {
     margin-bottom: 30px;
   }
   .faq .section-heading h2 {
-    font-size: 35px;
+    font-size: 42px;
   }
   .faq .section-heading > p:not(.eyebrow) {
-    font-size: 12px;
+    font-size: 16px;
     margin: 18px 0;
   }
   .faq-item > button {
-    font-size: 12px;
+    font-size: 16px;
     min-height: 64px;
   }
   .faq-item > div {
-    font-size: 12px;
+    font-size: 16px;
   }
   .contact-card {
     grid-template-columns: 1fr;
     gap: 35px;
   }
   .inline-form h2 {
-    font-size: 35px;
+    font-size: 42px;
   }
   .inline-form > p {
-    font-size: 12px;
+    font-size: 16px;
     max-width: 350px;
   }
   .inline-form label,
   .modal-card label {
-    font-size: 11px;
+    font-size: 15px;
   }
   input,
   select,
   textarea {
-    font-size: 16px;
+    font-size: 20px;
     min-height: 48px;
     padding: 10px;
   }
   .inline-form .consent {
-    font-size: 10px;
+    font-size: 14px;
     align-items: flex-start;
   }
   .consent input {
@@ -2941,11 +2941,11 @@ textarea {
   }
   .contact-copy .btn {
     display: flex;
-    font-size: 10px;
+    font-size: 14px;
   }
   .contact-copy p,
   .contact-copy > a {
-    font-size: 10px;
+    font-size: 14px;
   }
   .map {
     min-height: 215px;
@@ -2965,17 +2965,17 @@ textarea {
     grid-column: auto;
   }
   .footer .logo {
-    font-size: 29px;
+    font-size: 35px;
   }
   .footer-grid p,
   .footer-grid a:not(.logo) {
-    font-size: 11px;
+    font-size: 15px;
   }
   .footer h4 {
-    font-size: 9px;
+    font-size: 13px;
   }
   .footer-bottom {
-    font-size: 9px;
+    font-size: 13px;
     gap: 12px 20px;
     justify-content: flex-start;
     line-height: 1.8;
@@ -2988,10 +2988,10 @@ textarea {
     padding: 35px 25px 27px;
   }
   .modal-card h2 {
-    font-size: 30px;
+    font-size: 36px;
   }
   .modal-card > p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .modal-card .form-grid {
     gap: 16px 12px;
@@ -3001,7 +3001,7 @@ textarea {
     top: 14px;
   }
   .modal-card form > .btn {
-    font-size: 13px;
+    font-size: 17px;
   }
 }
 @media (max-width: 420px) {
@@ -3024,12 +3024,12 @@ textarea {
     gap: 15px;
   }
   .hero-actions .btn {
-    font-size: 12px;
+    font-size: 16px;
     padding-inline: 20px;
     gap: 17px;
   }
   .hero-service-link {
-    font-size: 9px;
+    font-size: 13px;
     max-width: 110px;
     line-height: 1.6;
   }
@@ -3037,19 +3037,19 @@ textarea {
     gap: 12px;
   }
   .hero-stats strong {
-    font-size: 25px;
+    font-size: 30px;
   }
   .hero-stats small {
-    font-size: 8px;
+    font-size: 12px;
   }
   .hero-stats > div {
     padding-left: 12px;
   }
   .hero-stats strong span {
-    font-size: 17px;
+    font-size: 20px;
   }
   .hero-caption {
-    font-size: 7px;
+    font-size: 11px;
   }
   .selector-card {
     padding: 25px 20px;
@@ -3063,28 +3063,28 @@ textarea {
     height: 25px;
   }
   .choice span {
-    font-size: 11px;
+    font-size: 15px;
   }
   .chip {
     padding: 8px 11px;
-    font-size: 10px;
+    font-size: 14px;
   }
   .section-heading h2 {
-    font-size: 32px;
+    font-size: 38px;
   }
   .service-card {
     padding: 18px 16px;
     min-height: 282px;
   }
   .service-card h3 {
-    font-size: 15px;
+    font-size: 19px;
     max-width: 135px;
   }
   .service-card p {
-    font-size: 10px;
+    font-size: 14px;
   }
   .service-card strong {
-    font-size: 14px;
+    font-size: 18px;
   }
   .service-card::after {
     right: 16px;
@@ -3096,32 +3096,32 @@ textarea {
   .service-card .text-link span {
     width: 23px;
     height: 23px;
-    font-size: 16px;
+    font-size: 20px;
   }
   .price-card {
     padding: 24px 16px 20px;
   }
   .price-card h3 {
-    font-size: 16px;
+    font-size: 20px;
   }
   .price-card > strong {
-    font-size: 25px;
+    font-size: 30px;
   }
   .price-card li {
-    font-size: 9px;
+    font-size: 13px;
     padding-left: 15px;
   }
   .price-card .btn {
-    font-size: 9px;
+    font-size: 13px;
   }
   .review-grid {
     gap: 24px 18px;
   }
   .review-grid > article > p {
-    font-size: 11px;
+    font-size: 15px;
   }
   .reviewer small {
-    font-size: 8px;
+    font-size: 12px;
   }
   .booking-banner > div:last-child {
     flex-direction: column;
@@ -3133,7 +3133,7 @@ textarea {
   }
   .booking-banner > div:last-child a {
     align-self: center;
-    font-size: 11px;
+    font-size: 15px;
   }
   .contact-copy {
     display: flex;
@@ -3145,7 +3145,7 @@ textarea {
   }
   .contact-copy p,
   .contact-copy > a {
-    font-size: 12px;
+    font-size: 16px;
   }
   .contact-copy .btn {
     display: none;
@@ -3195,50 +3195,50 @@ textarea {
   }
   .price-card h3 {
     min-height: 0;
-    font-size: 21px;
+    font-size: 25px;
   }
   .price-card > p {
-    font-size: 13px;
+    font-size: 17px;
   }
   .price-card > strong {
-    font-size: 33px;
+    font-size: 40px;
   }
   .price-card li {
-    font-size: 13px;
+    font-size: 17px;
     margin-block: 12px;
     padding-left: 23px;
   }
   .price-card .btn {
-    font-size: 12px;
+    font-size: 16px;
     min-height: 46px;
   }
   .review-grid > article > p {
-    font-size: 14px;
+    font-size: 18px;
   }
   .reviewer p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .reviewer small {
-    font-size: 10px;
+    font-size: 14px;
   }
   .reviewer {
     padding-top: 19px;
   }
   .service-card p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .service-card > div:last-child {
     min-height: 214px;
   }
   .service-card strong {
-    font-size: 15px;
+    font-size: 19px;
   }
   .feature p,
   .steps p {
-    font-size: 12px;
+    font-size: 16px;
   }
   .doctor-card p {
-    font-size: 13px;
+    font-size: 17px;
   }
   .menu-toggle {
     min-width: 44px;
@@ -3267,11 +3267,11 @@ textarea {
     padding: 25px;
   }
   .service-card h3 {
-    font-size: 20px;
+    font-size: 24px;
     max-width: none;
   }
   .service-card p {
-    font-size: 13px;
+    font-size: 17px;
   }
   .service-card > div:last-child {
     min-height: 170px;
@@ -3279,6 +3279,471 @@ textarea {
   .service-card .text-link {
     right: 16px;
     bottom: 16px;
+  }
+}
+/* Keep the enlarged type comfortable at tablet and phone widths. */
+@media (max-width: 1050px) {
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 24px 32px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 10px 20px #213e350c;
+  }
+  .nav.open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .nav a {
+    font-size: 19px;
+    padding: 12px 0;
+  }
+  .nav a::after {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+    order: 3;
+    min-width: 48px;
+    min-height: 48px;
+  }
+  .header-inner > .btn {
+    margin-left: auto;
+  }
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .doctor-grid {
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+  }
+  .doctor-card {
+    scroll-snap-align: center;
+  }
+  .row-heading {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+  .hero-content {
+    padding-bottom: 0;
+  }
+  .hero h1 {
+    font-size: clamp(54px, 8.5vw, 78px);
+  }
+  .hero h1 br:nth-child(2) {
+    display: none;
+  }
+  .hero h1 em {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .hero-lead {
+    max-width: 600px;
+  }
+  .desktop-break {
+    display: none;
+  }
+  .hero-visual {
+    width: min(100%, 620px);
+    margin-inline: auto;
+  }
+  .hero-photo {
+    aspect-ratio: 1.1;
+  }
+  .hero-stats {
+    max-width: 600px;
+  }
+  .row-heading {
+    display: block;
+  }
+  .row-heading > .text-link,
+  .section-heading .section-intro {
+    margin-top: 24px;
+  }
+  .section-heading .section-intro {
+    max-width: 540px;
+  }
+  .section-intro br {
+    display: none;
+  }
+  .selector-card {
+    display: block;
+  }
+  .selector-card > .section-heading {
+    margin-bottom: 30px;
+  }
+  .selector-grid {
+    display: block;
+  }
+  .selector-card .section-heading h2 {
+    max-width: 640px;
+  }
+  .recommendation {
+    margin-top: 30px;
+  }
+  .recommendation > p {
+    max-width: none;
+  }
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+  .contact-copy {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-copy h3,
+  .contact-copy > p:first-of-type {
+    grid-column: 1 / -1;
+  }
+  .contact-copy > p:last-of-type {
+    grid-column: 2;
+    grid-row: 3 / 5;
+  }
+}
+@media (max-width: 760px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+  .site-header {
+    height: 88px;
+  }
+  .header-inner {
+    gap: 12px;
+  }
+  .logo {
+    font-size: 31px;
+  }
+  .logo small {
+    font-size: 10px;
+    letter-spacing: 0.55px;
+  }
+  .logo > svg {
+    width: 35px;
+    height: 35px;
+  }
+  .header-inner > .btn {
+    font-size: 14px;
+    min-height: 48px;
+  }
+  .header-inner > .btn svg {
+    display: none;
+  }
+  .hero h1 {
+    font-size: clamp(45px, 12.7vw, 70px);
+  }
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .hero-actions .btn {
+    font-size: 17px;
+    min-height: 60px;
+    padding-inline: 25px;
+  }
+  .hero-service-link {
+    display: block;
+    font-size: 14px;
+    max-width: none;
+  }
+  .hero-stats {
+    max-width: none;
+  }
+  .hero-stats small {
+    font-size: 13px;
+  }
+  .hero-stats strong {
+    font-size: 33px;
+  }
+  .hero-photo-note {
+    position: static;
+    margin-top: 14px;
+    width: 100%;
+    padding: 16px;
+    box-shadow: none;
+  }
+  .hero-photo-note > div {
+    min-width: 0;
+  }
+  .hero-photo-note b {
+    font-size: 14px;
+  }
+  .hero-photo-note div > span {
+    font-size: 13px;
+  }
+  .hero-caption {
+    position: static;
+    display: block;
+    margin-top: 14px;
+    font-size: 11px;
+    text-align: right;
+  }
+  .hero-visual {
+    padding-bottom: 0;
+  }
+  .choice {
+    font-size: 16px;
+    min-height: 66px;
+  }
+  .choice span {
+    font-size: inherit;
+  }
+  .choice svg {
+    width: 32px;
+    height: 32px;
+  }
+  .chip,
+  .tab {
+    font-size: 15px;
+    min-height: 48px;
+  }
+  .recommendation-top {
+    gap: 15px;
+  }
+  .recommendation-top .badge {
+    font-size: 12px;
+  }
+  .doctor-card p {
+    font-size: 16px;
+  }
+  .doctor-card h3 {
+    font-size: 25px;
+  }
+  .doctor-card > div:last-child {
+    padding: 25px;
+  }
+  .feature p,
+  .steps p {
+    font-size: 16px;
+  }
+  .feature h3,
+  .steps h3 {
+    font-size: 20px;
+  }
+  .faq-item > button {
+    font-size: 17px;
+  }
+  .faq-item > div {
+    font-size: 16px;
+  }
+  .footer-bottom {
+    font-size: 12px;
+  }
+  .footer-bottom a {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 620px) {
+  .service-grid,
+  .feature-grid,
+  .price-grid,
+  .review-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    min-height: 0;
+    padding: 28px;
+  }
+  .service-card > div:last-child {
+    min-height: 220px;
+  }
+  .service-card h3 {
+    max-width: none;
+    font-size: 26px;
+  }
+  .service-card p {
+    font-size: 17px;
+    max-width: none;
+  }
+  .service-card strong {
+    font-size: 23px;
+  }
+  .service-icon svg {
+    width: 42px;
+    height: 42px;
+  }
+  .service-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .service-card .text-link {
+    right: 20px;
+    bottom: 20px;
+  }
+  .service-card .text-link span {
+    width: 36px;
+    height: 36px;
+    font-size: 26px;
+  }
+  .feature,
+  .feature + .feature {
+    padding-top: 24px;
+  }
+  .feature p {
+    max-width: none;
+  }
+  .feature h3 {
+    max-width: none;
+    margin-top: 18px;
+  }
+  .circle-icon {
+    width: 58px;
+    height: 58px;
+  }
+  .circle-icon svg {
+    width: 33px;
+    height: 33px;
+  }
+  .price-card {
+    padding: 30px;
+  }
+  .price-card h3 {
+    font-size: 26px;
+  }
+  .price-card li {
+    font-size: 16px;
+  }
+  .price-card .btn {
+    font-size: 16px;
+    min-height: 54px;
+  }
+  .price-card > strong {
+    font-size: 40px;
+  }
+  .case-card > p {
+    font-size: 16px;
+  }
+  .case-card h3 {
+    font-size: 26px;
+  }
+  .review-grid > article > p {
+    font-size: 18px;
+  }
+  .reviewer p {
+    font-size: 16px;
+  }
+  .reviewer small {
+    font-size: 14px;
+  }
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+  .contact-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-copy p,
+  .contact-copy > a {
+    font-size: 16px;
+  }
+  .contact-copy .btn {
+    display: none;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-card .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 420px) {
+  .header-inner > .btn {
+    display: none;
+  }
+  .menu-toggle {
+    margin-left: auto;
+  }
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-service-link {
+    align-self: flex-start;
+  }
+  .hero-stats {
+    gap: 10px;
+  }
+  .hero-stats > div {
+    padding-left: 10px;
+  }
+  .hero-stats strong {
+    font-size: 30px;
+  }
+  .hero-stats small {
+    font-size: 12px;
+  }
+  .hero-content > .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.7px;
+  }
+  .choice {
+    padding: 12px;
+    gap: 9px;
+  }
+  .choice svg {
+    width: 26px;
+    height: 26px;
+  }
+  .choice i {
+    flex-shrink: 0;
+  }
+  .choice-row {
+    gap: 8px;
+  }
+  .quiz legend {
+    font-size: 15px;
+  }
+  .selector-card {
+    padding: 26px 20px;
+  }
+  .recommendation {
+    padding: 25px;
+  }
+  .recommendation h3 {
+    font-size: 31px;
+  }
+  .recommendation-top svg {
+    width: 28px;
+    height: 28px;
+  }
+  .badge {
+    font-size: 12px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+  }
+  .steps p,
+  .steps h3 {
+    max-width: none;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid > div,
+  .footer-grid > div:nth-child(4) {
+    grid-column: auto;
+  }
+  .footer-grid > div:first-child {
+    grid-column: auto;
+  }
+}
+@media (max-width: 360px) {
+  .choice-row {
+    grid-template-columns: 1fr;
   }
 }
 @media (prefers-reduced-motion: reduce) {
